@@ -32,31 +32,31 @@ Many of Jargon Unchained’s competitors are similarly the product of sole-opera
 
 The stakeholder’s initial research discovered [World Wide Words](http://www.worldwidewords.org/) an archive of newsletter articles and word Index written by a Cambridge graduate and Oxford dictionary reader. He ‘ceased writing’ World Wide Words in 2017. There is no search function and the site is poorly structured.
 
-[Worldwide words index]
+![Worldwide words index](readme/competitors/WorldWideWordsIndex.png)
 
 Larger resources such as [Online Etymology Dictionary](http://www.etymonline.com/) are more robust with larger word lists largely compiled from other printed etmology books. It’s well researched by an American scholar and self-confessed early online amateur. But it is enthusiastically maintained with even a Google Chrome extension with an academically authoritative layout which is also functional. The search and letter navigation are easy to understand.
 
-[OnlineEtymologyDictionary]
+![Online Etymology Dictionary](readme/competitors/OnlineEtymologyDictionary.png)
 
 A similarly large resource by a British academic Gary Martin is [The Phrase Finder](https://www.phrases.org.uk/). It’s scope is even broader but from a UX perspective the home page suffers from feature creep. With a flattened word cloud dominating the right hand side, the alphabet on the left is most useful search. The most interesting homepage function is the 'most popular today’ section.
 
-[Phrase Finder Home]
+![Phrase Finder Home](readme/competitors/OnlineEtymologyDictionary.png)
 
 The full list and well using the well structured taxonomy is the best way to navigate.
 
-[Phrase Finder Full List]
+![Phrase Finder Full List](readme/competitors/PhraseFinderHome.png)
 
 Clicking on the ‘Work’ category does take you to around [30 of business jargon words](https://www.phrases.org.uk/meanings/business-and-work-related-phrases.html). It’s also worth pointing out that whilst in terms of tonally it’s a much more serious site. Once you’ve stepped through the navigation and reached the database - the UI is clean, fast focussed and learnable.
 
 Much more inline with the humorous tone of Jargon Unchained is[The Business Jargon Dictionary](http://www.theofficelife.com/business-jargon-dictionary-A.html) created by The Office Life. Navigation is via the rounded alphabet old school typwriter letters. It has a moustachioed water-cooler and the brevity of the entries encourages contribution and makes them easily shareable.
 
-[Business Jargon Dictionary]
+![Business Jargon Dictionary](readme/competitors/BusinessJargonDictionary.png)
 
 Although it’s worth noting that the social share buttons don’t work and the site’s [Twitter account](https://twitter.com/jargondujour) stopped retweeting in 2017. Contribution is done through a contact form which prevents a fluid and active community.
 
 In terms of simple and effective UI nurturing a strong community Jargon Unchained can learn a lot from [Urban Dictionary](https://www.urbandictionary.com/). Its is easy to contribute and interact, from visitors who can upvote and easily contribute, with simple search bar, shuffle function and login, through to a democratic contribution function.
 
- 
+ ![Urban Dictionary](readme/competitors/UrbanDictionary.png)
 
 Priorities - New strategy
 -------------------------
