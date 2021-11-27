@@ -24,11 +24,14 @@
               <ul class="right hide-on-med-and-down">
                 <li><a href="">Home</a></li>
                 <li><a href="{{ url_for('get_jargon') }}">Dictionary</a></li>
-                <li><a href="#">Contribute</a></li>
-                <li><a href="{{ url_for('register') }}">Join us</a></li>
-                <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
-                <li><a href="{{ url_for('login') }}">Log In</a></li>
-                <li><a href="#">Log Out</a></li>
+                {% if session.user %}
+                  <li><a href="#">Contribute</a></li>
+                  <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
+                  <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                {% else %}
+                  <li><a href="{{ url_for('register') }}">Join us</a></li>
+                  <li><a href="{{ url_for('login') }}">Log In</a></li>
+                {% endif %}
               </ul>
             </div>
           </nav>
@@ -40,7 +43,7 @@
             <li><a href="#">Contribute</a></li>
             <li><a href="{{ url_for('profile', username=session['user']) }}">Profile</a></li>
             <li><a href="{{ url_for('login') }}">Log In</a></li>
-            <li><a href="#">Log Out</a></li>
+            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
           </ul>
     </header>
 
