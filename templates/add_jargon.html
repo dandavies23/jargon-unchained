@@ -3,20 +3,40 @@
 
     <h3 class="cyan-text text-darken-3 center-align">Add Jargon</h3>
 
-    <div class="row">
-        <form class="col s12">
+    <div class="row card-panel grey lighten-4">
+        <form class="col s12" method="POST" action="">
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-user-circle prefix cyan-text text-darken-3"></i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix2">First Name</label>
+                    <i class="fas fa-comment-dollar prefix cyan-text text-darken-3"></i>
+                    <input id="jargon_name" name="jargon_name" minlength="5" maxlength="25"
+                        type="text" class="validate" required>
+                    <label for="jargon_name">Jargon keyword</label>
                 </div>
             </div>
             <div class="row">
                 <div class="input-field col s12">
-                    <i class="fas fa-user-circle prefix cyan-text text-darken-3"></i>
-                    <input id="icon_prefix" type="text" class="validate">
-                    <label for="icon_prefix2">First Name</label>
+                    <i class="fas fa-book prefix cyan-text text-darken-3"></i>
+                    <textarea id="definition" name="definition" minlength="5" maxlength="200" 
+                        class="materialize-textarea validate" required></textarea>
+                    <label for="definition">What does it really mean?</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-comment prefix cyan-text text-darken-3"></i>
+                    <textarea id="usage" name="usage" minlength="5" maxlength="100" 
+                        class="materialize-textarea validate" required></textarea>
+                    <label for="usage">Use it in a sentence</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-keyboard prefix cyan-text text-darken-3"></i>
+                    <textarea id="definition" name="definition" minlength="5" maxlength="500" 
+                        class="materialize-textarea validate" required></textarea>
+                    <label for="definition">Why is it here? Why do you love and hate it? 
+                        Can you make it right? Is it going to last?
+                    </label>
                 </div>
             </div>
         </form>
