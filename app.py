@@ -107,8 +107,22 @@ def logout():
     return redirect(url_for("login"))
 
 
-@app.route("/add_jargon")
+@app.route("/add_jargon", methods=["GET", "POST"])
 def add_jargon():
+    if request.method == "POST":
+        jargon = {
+            "jargon_name": request.form.get("jargon_name"),
+            "definition": request.form.get("definition"),
+            "usage": request.form.get("usage"),
+            "category_name": request.form.get("category_name"),
+            "editorialise": request.form.get("editorialise"),
+            "created_by": session["user"]
+        }
+        # add rating to dictionary? or create as separate field?
+        mongo.db.jargon.insert_one(jargon)
+        flash("Jargon added to dictionary")
+        return redirect(url_for("get_jargon"))
+
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_jargon.html", categories=categories)
 

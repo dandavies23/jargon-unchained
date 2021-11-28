@@ -1,35 +1,27 @@
 {% extends "base.html" %}
 {% block content %}
-    {% for entry in jargon %}
-        {{ entry.jargon_name }}<br>
-        {{ entry.definition }}<br>
-        {{ entry.usage }}<br>
-        {{ entry.editorialise }}<br>
-        {{ entry.love_percent }}<br>
-        {{ entry.category_name }}<br>  
-    {% endfor %}
+                {% for entry in jargon %}
+        <div class="row">
+            <div class="col s12 m9 l10">
+                <div id="{{ entry.jargon_name }}" class="section scrollspy">
+                    <h4>{{ entry.jargon_name }}</h4>
+                        <strong>Defintion: </strong>{{ entry.definition }}<br>
+                        <strong>Usage: </strong>&ldquo;{{ entry.usage }}&rdquo;<br>
+                        <strong>Added by: </strong> {{ entry.created_by }}<br>
+                        <strong>Category: </strong>{{ entry.category_name }}<br>
+                        <strong>Extended rant: </strong>{{ entry.editorialise }}<br>
+                        <strong>Love score: </strong>{{ entry.love_percent }}<br>
+                </div>
+            </div>
+                {% endfor %}
 
-    <div class="row">
-        <div class="col s12 m9 l10">
-        <div id="introduction" class="section scrollspy">
-            <p>Content </p>
+            <div class="col hide-on-small-only m3 l2">
+                <ul class="section table-of-contents">
+                    {% for entry in jargon %}
+                    <li><a href="#{{ entry.jargon_name }}">{{ entry.jargon_name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
         </div>
-
-        <div id="structure" class="section scrollspy">
-            <p>Content </p>
-        </div>
-
-        <div id="initialization" class="section scrollspy">
-            <p>Content </p>
-        </div>
-        </div>
-        <div class="col hide-on-small-only m3 l2">
-        <ul class="section table-of-contents">
-            <li><a href="#introduction">Introduction</a></li>
-            <li><a href="#structure">Structure</a></li>
-            <li><a href="#initialization">Intialization</a></li>
-        </ul>
-        </div>
-    </div>
-        
 {% endblock %}
+
