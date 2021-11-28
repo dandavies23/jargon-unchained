@@ -109,8 +109,9 @@ def logout():
 
 @app.route("/add_jargon")
 def add_jargon():
-    return render_template("add_jargon.html")
-    
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("add_jargon.html", categories=categories)
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
