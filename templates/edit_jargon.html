@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="cyan-text text-darken-3 center-align">Edit Jargon</h3>
+
+    <div class="row card-panel grey lighten-4">
+        <form class="col s12" method="POST" action="{{ url_for('edit_jargon', entry_id=entry._id) }}">
+            <!-- Jargon name -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-comment-dollar prefix cyan-text text-darken-3"></i>
+                    <input id="jargon_name" name="jargon_name" minlength="5" maxlength="25"
+                        type="text" class="validate" required>
+                    <label for="jargon_name">Jargon keyword</label>
+                </div>
+            </div>
+            <!-- Definition -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-book prefix cyan-text text-darken-3"></i>
+                    <textarea id="definition" name="definition" minlength="5" maxlength="200" 
+                        class="materialize-textarea validate" required></textarea>
+                    <label for="definition">What does it really mean?</label>
+                </div>
+            </div>
+            <!-- Usage -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-comment prefix cyan-text text-darken-3"></i>
+                    <textarea id="usage" name="usage" minlength="5" maxlength="100" 
+                        class="materialize-textarea validate" required></textarea>
+                    <label for="usage">Use it in a sentence</label>
+                </div>
+            </div>
+            <!-- Choose category -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-folder-open prefix cyan-text text-darken-3"></i>
+                    <select id="category_name" name="category_name" class="validate" required>
+                        <option value="" disabled selected>Choose category</option>
+                        {% for category in categories %}
+                            <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                        {% endfor %}
+                    </select>
+                    <label for="category_name">Jargon Category</label>
+                </div>
+            </div>
+            <!-- Editorialise optional -->
+            <div class="row">
+                <div class="input-field col s12">
+                    <i class="fas fa-keyboard prefix cyan-text text-darken-3"></i>
+                    <textarea id="editorialise" name="editorialise" minlength="5" maxlength="1200" 
+                        class="materialize-textarea validate"></textarea>
+                    <label for="editorialise">Why is it here? Can you make it right? (Optional)
+                    </label>
+                </div>
+            </div>
+            <!-- submit button -->
+            <div class="row">
+                <div class="col s12 center-align">
+                    <button type="submit" class="btn-large cyan darken-4">
+                        Edit Jargon <i class="fas fa-edit right"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+        
+
+
+{% endblock %}

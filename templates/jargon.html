@@ -2,10 +2,10 @@
 {% block content %}
                 {% for entry in jargon %}
         <div class="row">
-            <div class="col s12 m9 l10">
+            <div class="col s12 m9 l10 push-m3 push-l2">
                 <div id="{{ entry.jargon_name }}" class="section scrollspy">
                     <h4>{{ entry.jargon_name }}</h4>
-                        <p class="flow-text"><strong>Defintion: </strong>{{ entry.definition }}<br>
+                        <p class="flow-text"><strong>Definition: </strong>{{ entry.definition }}<br>
                         <strong>Usage: </strong>&ldquo;{{ entry.usage }}&rdquo;<br>
                         <strong>Added by: </strong> {{ entry.created_by }}<br>
                         <strong>Category: </strong>{{ entry.category_name }}<br>
@@ -15,7 +15,7 @@
                             <i class="far fa-thumbs-up"></i>
                             <i class="far fa-thumbs-down"></i>
                             <i class="far fa-comments"></i>
-                            <i class="fas fa-plus-circle"></i>
+                            <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}"><i class="fas fa-plus-circle">Edit</i></a>
                             <i class="fas fa-sort-numeric-down-alt"></i>
                             <i class="fas fa-sort-alpha-down"></i>
                         </div>
@@ -23,7 +23,7 @@
             </div>
                 {% endfor %}
 
-            <div class="col hide-on-small-only m3 l2">
+            <div class="col hide-on-small-only m3 l2 pull-m9 pull-l10">
                 <ul class="section table-of-contents">
                     {% for entry in jargon %}
                     <li><a href="#{{ entry.jargon_name }}">{{ entry.jargon_name }}</a></li>

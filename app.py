@@ -95,8 +95,7 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("profile.html", username=username)
-    
+        return render_template("profile.html", username=username)   
     return redirect(url_for("login"))
 
 @app.route("/logout")
@@ -126,6 +125,13 @@ def add_jargon():
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("add_jargon.html", categories=categories)
 
+
+@app.route("/edit_jargon/<jargon_id>", methods=["GET", "POST"])
+def edit_jargon(jargon_id):
+    entry = mongo.db.jargon.find_one({"_id": ObjectId(entry_id)})
+
+    categories = mongo.db.categories.find().sort("category_name", 1)
+    return render_template("edit_jargon.html", entry=entry, categories=categories)
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
