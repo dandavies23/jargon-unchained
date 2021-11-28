@@ -5,12 +5,21 @@
             <div class="col s12 m9 l10">
                 <div id="{{ entry.jargon_name }}" class="section scrollspy">
                     <h4>{{ entry.jargon_name }}</h4>
-                        <strong>Defintion: </strong>{{ entry.definition }}<br>
+                        <p><strong>Defintion: </strong>{{ entry.definition }}<br>
                         <strong>Usage: </strong>&ldquo;{{ entry.usage }}&rdquo;<br>
                         <strong>Added by: </strong> {{ entry.created_by }}<br>
                         <strong>Category: </strong>{{ entry.category_name }}<br>
                         <strong>Extended rant: </strong>{{ entry.editorialise }}<br>
-                        <strong>Love score: </strong>{{ entry.love_percent }}<br>
+                        <strong>Love score: </strong>{{ entry.love_percent }}<br></p>
+                        <div class="row col-12 text-center cyan-text text-darken-3">
+                            <i class="far fa-thumbs-up"></i>
+                            <i class="far fa-thumbs-down"></i>
+                            <i class="far fa-comments"></i>
+                            <i class="fas fa-plus-circle"></i>
+                            <i class="fas fa-sort-numeric-down-alt"></i>
+                            <i class="fas fa-sort-alpha-down"></i>
+
+                        </div>
                 </div>
             </div>
                 {% endfor %}
