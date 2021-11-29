@@ -126,8 +126,8 @@ def add_jargon():
     return render_template("add_jargon.html", categories=categories)
 
 
-@app.route("/edit_jargon/<jargon_id>", methods=["GET", "POST"])
-def edit_jargon(jargon_id):
+@app.route("/edit_jargon/<entry_id>", methods=["GET", "POST"])
+def edit_jargon(entry_id):
     entry = mongo.db.jargon.find_one({"_id": ObjectId(entry_id)})
 
     categories = mongo.db.categories.find().sort("category_name", 1)
