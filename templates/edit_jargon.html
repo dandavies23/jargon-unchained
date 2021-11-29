@@ -10,7 +10,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-comment-dollar prefix cyan-text text-darken-3"></i>
                     <input id="jargon_name" name="jargon_name" minlength="5" maxlength="25"
-                        type="text" class="validate" required>
+                        value="{{ entry.jargon_name }}" type="text" class="validate" required>
                     <label for="jargon_name">Jargon keyword</label>
                 </div>
             </div>
@@ -19,7 +19,8 @@
                 <div class="input-field col s12">
                     <i class="fas fa-book prefix cyan-text text-darken-3"></i>
                     <textarea id="definition" name="definition" minlength="5" maxlength="200" 
-                        class="materialize-textarea validate" required></textarea>
+                        class="materialize-textarea validate" required>
+                        {{- entry.definition -}}</textarea>
                     <label for="definition">What does it really mean?</label>
                 </div>
             </div>
@@ -28,7 +29,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-comment prefix cyan-text text-darken-3"></i>
                     <textarea id="usage" name="usage" minlength="5" maxlength="100" 
-                        class="materialize-textarea validate" required></textarea>
+                        class="materialize-textarea validate" required>{{- entry.usage -}}</textarea>
                     <label for="usage">Use it in a sentence</label>
                 </div>
             </div>
@@ -37,9 +38,13 @@
                 <div class="input-field col s12">
                     <i class="fas fa-folder-open prefix cyan-text text-darken-3"></i>
                     <select id="category_name" name="category_name" class="validate" required>
-                        <option value="" disabled selected>Choose category</option>
+                        <option value="" disabled>Choose category</option>
                         {% for category in categories %}
+                            {% if category.category_name == entry.category_name %} <!-- check this -->
+                            <option value="{{ category.category_name }}" selected>{{ category.category_name }}</option>
+                            {% else %}
                             <option value="{{ category.category_name }}">{{ category.category_name }}</option>
+                            {% endif %}
                         {% endfor %}
                     </select>
                     <label for="category_name">Jargon Category</label>
@@ -50,7 +55,7 @@
                 <div class="input-field col s12">
                     <i class="fas fa-keyboard prefix cyan-text text-darken-3"></i>
                     <textarea id="editorialise" name="editorialise" minlength="5" maxlength="1200" 
-                        class="materialize-textarea validate"></textarea>
+                        class="materialize-textarea validate">{{- entry.editorialise -}}</textarea>
                     <label for="editorialise">Why is it here? Can you make it right? (Optional)
                     </label>
                 </div>
@@ -58,6 +63,10 @@
             <!-- submit button -->
             <div class="row">
                 <div class="col s12 center-align">
+                    <!-- cancel button -->
+                    <a href="{{ url_for('get_jargon') }}" class="btn-large red">
+                        Cancel <i class="fas fa-times-circle right"></i>
+                    </a>
                     <button type="submit" class="btn-large cyan darken-4">
                         Edit Jargon <i class="fas fa-edit right"></i>
                     </button>
