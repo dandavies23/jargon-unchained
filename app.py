@@ -146,6 +146,14 @@ def edit_jargon(entry_id):
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_jargon.html", entry=entry, categories=categories)
 
+
+@app.route("/delete_jargon/<entry_id>")
+def delete_jargon(entry_id):
+    mongo.db.jargon.remove({"_id": ObjectId(entry_id)})
+    flash("Jargon entry deleted")
+    return redirect(url_for("get_jargon"))
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

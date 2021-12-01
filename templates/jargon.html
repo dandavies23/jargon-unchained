@@ -17,6 +17,7 @@
                             <i class="far fa-comments"></i>
                             {% if session.user|lower == entry.created_by|lower %}
                                 <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}"><i class="fas fa-pencil-alt"></i></a>
+                                <a href="{{ url_for('delete_jargon', entry_id=entry._id) }}"><i class="fas fa-times-circle red-text text-darken-2"></i></i></a>
                             {% endif %}
                             <i class="fas fa-sort-numeric-down-alt"></i>
                             <i class="fas fa-sort-alpha-down"></i>
