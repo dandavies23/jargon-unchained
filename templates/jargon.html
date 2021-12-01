@@ -15,7 +15,9 @@
                             <i class="far fa-thumbs-up"></i>
                             <i class="far fa-thumbs-down"></i>
                             <i class="far fa-comments"></i>
-                            <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}"><i class="fas fa-pencil-alt"></i></a>
+                            {% if session.user|lower == entry.created_by|lower %}
+                                <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}"><i class="fas fa-pencil-alt"></i></a>
+                            {% endif %}
                             <i class="fas fa-sort-numeric-down-alt"></i>
                             <i class="fas fa-sort-alpha-down"></i>
                         </div>

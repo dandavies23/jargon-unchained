@@ -128,6 +128,19 @@ def add_jargon():
 
 @app.route("/edit_jargon/<entry_id>", methods=["GET", "POST"])
 def edit_jargon(entry_id):
+    if request.method == "POST":
+        submit = {
+            "jargon_name": request.form.get("jargon_name"),
+            "definition": request.form.get("definition"),
+            "usage": request.form.get("usage"),
+            "category_name": request.form.get("category_name"),
+            "editorialise": request.form.get("editorialise"),
+            "created_by": session["user"]
+        }
+        # add rating to dictionary? or create as separate field?
+        mongo.db.jargon.update({"_id": ObjectId(entry_id)}, submit)
+        flash("Jargon updated")
+    
     entry = mongo.db.jargon.find_one({"_id": ObjectId(entry_id)})
 
     categories = mongo.db.categories.find().sort("category_name", 1)
