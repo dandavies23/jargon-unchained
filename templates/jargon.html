@@ -1,7 +1,8 @@
 {% extends "base.html" %}
 {% block content %}
-                {% for entry in jargon %}
+               
         <div class="row">
+            {% for entry in jargon %}
             <div class="col s12 m9 l10 push-m3 push-l2">
                 <div id="{{ entry.jargon_name }}" class="section scrollspy">
                     <h4>{{ entry.jargon_name }}</h4>
@@ -24,7 +25,7 @@
                         </div>
                 </div>
             </div>
-                {% endfor %}
+            {% endfor %}
 
             <div class="col hide-on-small-only m3 l2 pull-m9 pull-l10">
                 <ul class="section table-of-contents">

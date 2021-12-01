@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+
+    <h3 class="center-align cyan-text text-darken-4">Manage Categories</h3>
+
+    <div class="row">
+        {% for category in categories %}
+            <div class="col s12 m3">
+                <div class="card cyan center-align">
+                    <div class="card-content white-text">
+                        <span class="card-title">{{ category.category_name }}</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="#"><i class="fas fa-pencil-alt"></i></a>
+                        <a href="#"><i class="fas fa-times-circle red-text text-darken-2"></i></i></a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
