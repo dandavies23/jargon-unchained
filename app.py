@@ -25,6 +25,13 @@ def get_jargon():
     return render_template("jargon.html", jargon=jargon)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    query = request.form.get("query")
+    jargon = list(mongo.db.jargon.find({"$text": {"$search": query}}))
+    return render_template("jargon.html", jargon=jargon)
+
+
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -190,7 +197,7 @@ def edit_category(category_id):
 @app.route("/delete_category/<category_id>")
 def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
-    flash("Category successfully seleted")
+    flash("Category successfully deleted")
     return redirect(url_for("get_categories"))
 
 
