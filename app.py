@@ -159,6 +159,7 @@ def get_categories():
     categories = list(mongo.db.categories.find().sort("category_name", 1)) #sort categories alphabetically and return as list
     return render_template("categories.html", categories=categories)
 
+
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     if request.method == "POST":
@@ -170,6 +171,7 @@ def add_category():
         return redirect(url_for("get_categories"))
         
     return render_template("add_category.html")
+
 
 @app.route("/edit_category/<category_id>", methods=["GET", "POST"])
 def edit_category(category_id):
@@ -183,6 +185,14 @@ def edit_category(category_id):
          
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     return render_template("edit_category.html", category=category)
+
+
+@app.route("/delete_category/<category_id>")
+def delete_category(category_id):
+    mongo.db.categories.remove({"_id": ObjectId(category_id)})
+    flash("Category successfully seleted")
+    return redirect(url_for("get_categories"))
+
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
