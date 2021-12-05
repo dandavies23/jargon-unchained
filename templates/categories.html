@@ -18,9 +18,25 @@
                     <div class="card-content white-text">
                         <span class="card-title flow-text">{{ category.category_name }}</span>
                     </div>
-                    <div class="card-action">
-                        <a href="{{ url_for('edit_category', category_id=category._id) }}"><i class="fas fa-pencil-alt"></i></a>
-                        <a href="{{ url_for('delete_category', category_id=category._id) }}"><i class="fas fa-times-circle red-text text-darken-2"></i></i></a>
+                    <div class="card-action flow-text">
+                        <a href="{{ url_for('edit_category', category_id=category._id) }}">
+                            <i class="btn fas fa-pencil-alt"></i>
+                        </a>
+                        <button data-target="{{ category._id }}" class="btn modal-trigger red darken-1">
+                            <i class="fas fa-times-circle"></i>
+                        </button>
+                    </div>
+                    <!-- Modal Structure -->
+                    <div id="{{ category._id }}" class="modal">
+                        <div class="modal-content">
+                            <h4>Are you sure you want to Delete this Category?</h4>
+                            <p>Ctrl-Z won't save you if you hit delete!</p>
+                        </div>
+                        <div class="modal-footer">
+                            <a href="#!" class="modal-close btn-flat cyan darken-2"><i class="fas fa-undo right"></i>Take me back</a>
+                            <a href="{{ url_for('delete_category', category_id=category._id) }}" 
+                            class="btn-flat red">Delete delete!<i class="fas fa-times-circle right"></i></a>
+                        </div>
                     </div>
                 </div>
             </div>
