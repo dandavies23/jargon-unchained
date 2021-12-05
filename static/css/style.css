@@ -15,3 +15,7 @@
 .table-of-contents a:hover {
     border-left: 1px solid #39c2c8;
 }
+
+.btn-flat {
+    color: #ffff;
+}

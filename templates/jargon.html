@@ -23,7 +23,7 @@
                 <li><a href="#{{ entry.jargon_name }}">{{ entry.jargon_name }}</a></li>
                 {% endfor %}
             </ul>
-        </div>           
+        </div>      
         <div class="row">
             {% for entry in jargon %}
             <div class="col s12 m9 l10 push-m3 push-l2">
@@ -40,8 +40,8 @@
                             <i class="far fa-thumbs-down"></i>
                             <i class="far fa-comments"></i>
                             {% if session.user|lower == entry.created_by|lower %}
-                                <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}"><i class="fas fa-pencil-alt"></i></a>
-                                <button data-target="{{ entry._id }}" class="btn modal-trigger red darken-1">
+                                <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="btn-flat btn-large cyan darken-3"><i class="fas fa-pencil-alt"></i></a>
+                                <button data-target="{{ entry._id }}" class="btn-flat btn-large modal-trigger red darken-1">
                                     <i class="fas fa-times-circle"></i>
                                 </button>
                             {% endif %}
@@ -63,13 +63,6 @@
                 </div>
             </div>
             {% endfor %}
-            <!-- <div class="col hide-on-small-only m3 l2 pull-m9 pull-l10">
-                <ul class="section table-of-contents">
-                    {% for entry in jargon %}
-                    <li><a href="#{{ entry.jargon_name }}">{{ entry.jargon_name }}</a></li>
-                    {% endfor %}
-                </ul>
-            </div> -->
         </div>
 {% endblock %}
 
