@@ -33,8 +33,13 @@
                         <strong>Usage: </strong>&ldquo;{{ entry.usage }}&rdquo;<br>
                         <strong>Added by: </strong> {{ entry.created_by }}<br>
                         <strong>Category: </strong>{{ entry.category_name }}<br>
-                        <strong>Extended rant: </strong>{{ entry.editorialise }}<br>
                         <strong>Love score: </strong>{{ entry.love_percent }}<br></p>
+                        <ul class="collapsible">
+                            <li>
+                                <div class="collapsible-header flow-text"><i class="fas fa-info-circle"></i> Extended rant</div>
+                                <div class="collapsible-body flow-text">{{ entry.editorialise }}</div>
+                            </li>
+                        </ul>  
                         <div class="col s-12 m-9 l10 text-center cyan-text text-darken-3 dict-cta">
                             <i class="far fa-thumbs-up"></i>
                             <i class="far fa-thumbs-down"></i>
