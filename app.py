@@ -31,7 +31,11 @@ def az_jargon():
     print(jargon)
     return render_template("jargon.html", jargon=jargon)
 
-# db.jargon.find().sort( { "jargon_name": 1 } )
+@app.route("/za_jargon")
+def za_jargon():
+    jargon = list(mongo.db.jargon.find().sort("jargon_name", -1))
+    print(jargon)
+    return render_template("jargon.html", jargon=jargon)
 
 
 @app.route("/search", methods=["GET", "POST"])
