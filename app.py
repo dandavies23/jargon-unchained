@@ -27,10 +27,12 @@ def get_jargon():
 
 @app.route("/az_jargon")
 def az_jargon():
-    jargon = mongo.db.jargon.find().sort("jargon_name", 1)
+    jargon = list(mongo.db.jargon.find().sort("jargon_name", 1))
+    print(jargon)
     return render_template("jargon.html", jargon=jargon)
 
 # db.jargon.find().sort( { "jargon_name": 1 } )
+
 
 @app.route("/search", methods=["GET", "POST"])
 def search():
@@ -84,20 +86,22 @@ def login():
             # ensure hashed password matches user input
             if check_password_hash(
                     existing_user["password"], request.form.get("password")):
-                        session["user"] = request.form.get("username").lower()
-                        flash("Welcome, {}".format(
-                            request.form.get("username")))
-                        return redirect(url_for(
-                            "profile", username=session["user"]))
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(
+                    request.form.get("username")))
+                return redirect(url_for(
+                    "profile", username=session["user"]))
             else:
                 # invalid password
                 flash("Incorrect Username and/or Password")
-                return redirect(url_for("login")) # returns to login screen for now
+                # returns to login screen for now
+                return redirect(url_for("login"))
 
         else:
             # username doesn't exist
             flash("Incorrect Username and/or Password")
-            return redirect(url_for("login")) # returns to login screen for now
+            # returns to login screen for now
+            return redirect(url_for("login"))
 
     return render_template("login.html")
 
@@ -109,8 +113,9 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("profile.html", username=username)   
+        return render_template("profile.html", username=username)
     return redirect(url_for("login"))
+
 
 @app.route("/logout")
 def logout():
@@ -154,7 +159,7 @@ def edit_jargon(entry_id):
         # add rating to dictionary? or create as separate field?
         mongo.db.jargon.update({"_id": ObjectId(entry_id)}, submit)
         flash("Jargon updated")
-    
+
     entry = mongo.db.jargon.find_one({"_id": ObjectId(entry_id)})
 
     categories = mongo.db.categories.find().sort("category_name", 1)
@@ -170,7 +175,8 @@ def delete_jargon(entry_id):
 
 @app.route("/get_categories")
 def get_categories():
-    categories = list(mongo.db.categories.find().sort("category_name", 1)) #sort categories alphabetically and return as list
+    # sort categories alphabetically and return as list
+    categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
 
 
@@ -183,7 +189,7 @@ def add_category():
         mongo.db.categories.insert_one(category)
         flash("New category added")
         return redirect(url_for("get_categories"))
-        
+
     return render_template("add_category.html")
 
 
@@ -196,7 +202,7 @@ def edit_category(category_id):
         mongo.db.categories.update({"_id": ObjectId(category_id)}, submit)
         flash("Category sucessfully updated")
         return redirect(url_for("get_categories"))
-         
+
     category = mongo.db.categories.find_one({"_id": ObjectId(category_id)})
     return render_template("edit_category.html", category=category)
 
