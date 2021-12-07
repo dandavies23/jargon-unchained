@@ -25,6 +25,13 @@ def get_jargon():
     return render_template("jargon.html", jargon=jargon)
 
 
+@app.route("/az_jargon")
+def az_jargon():
+    jargon = mongo.db.jargon.find().sort("jargon_name", 1)
+    return render_template("jargon.html", jargon=jargon)
+
+# db.jargon.find().sort( { "jargon_name": 1 } )
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
