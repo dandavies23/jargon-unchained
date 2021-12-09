@@ -37,16 +37,24 @@
                         {% if entry.editorialise %}
                         <ul class="collapsible">
                             <li>
-                                <div class="collapsible-header flow-text"><i class="fas fa-info-circle"></i> Extended rant</div>
+                                <div class="collapsible-header flow-text"><i class="far fa-comment-dots"></i> Extended rant</div>
                                 <div class="collapsible-body flow-text">{{ entry.editorialise }}</div>
                             </li>
                         </ul>
                         {% elif session.user|lower == entry.created_by|lower %}
-                            <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="btn-flat btn-large cyan darken-3">
-                            <i class="fas fa-info-circle"> </i>Add rant</a>
-                        {% elif session.user|lower == "admin"|lower %}
-                            <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="btn-flat btn-large cyan darken-3">
-                            <i class="fas fa-info-circle"> </i>Add rant</a>
+                        <ul class="collapsible">
+                            <li>
+                                <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="collapsible-header flow-text cyan darken-1 white-text">
+                                    <i class="far fa-comment-dots"></i> Extended rant</a>
+                            </li>
+                        </ul>
+                        {% elif session.user|lower == "admin"|lower %}  
+                        <ul class="collapsible">
+                            <li>
+                                <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="collapsible-header flow-text cyan darken-1 white-text">
+                                    <i class="far fa-comment-dots"></i> Extended rant</a>
+                            </li>
+                        </ul>
                         {% else %}
                         {% endif %}  
                         <div class="col s-12 m-9 l10 text-center cyan-text text-darken-3 dict-cta">
