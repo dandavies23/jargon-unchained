@@ -34,22 +34,33 @@
                         <strong>Added by: </strong> {{ entry.created_by }}<br>
                         <strong>Category: </strong>{{ entry.category_name }}<br>
                         <strong>Love score: </strong>{{ entry.love_percent }}<br></p>
+                        {% if entry.editorialise %}
                         <ul class="collapsible">
                             <li>
                                 <div class="collapsible-header flow-text"><i class="fas fa-info-circle"></i> Extended rant</div>
                                 <div class="collapsible-body flow-text">{{ entry.editorialise }}</div>
                             </li>
-                        </ul>  
+                        </ul>
+                        {% elif session.user|lower == entry.created_by|lower %}
+                            <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="btn-flat btn-large cyan darken-3">
+                            <i class="fas fa-info-circle"> </i>Add rant</a>
+                        {% elif session.user|lower == "admin"|lower %}
+                            <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="btn-flat btn-large cyan darken-3">
+                            <i class="fas fa-info-circle"> </i>Add rant</a>
+                        {% else %}
+                        {% endif %}  
                         <div class="col s-12 m-9 l10 text-center cyan-text text-darken-3 dict-cta">
                             <i class="far fa-thumbs-up"></i>
                             <i class="far fa-thumbs-down"></i>
                             {% if session.user|lower == "admin"|lower %}
-                                <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="btn-flat btn-large cyan darken-3"><i class="fas fa-pencil-alt"></i></a>
+                                <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="btn-flat btn-large cyan darken-3">
+                                    <i class="fas fa-pencil-alt"></i></a>
                                 <button data-target="{{ entry._id }}" class="btn-flat btn-large modal-trigger red darken-1">
                                     <i class="fas fa-times-circle"></i>
                                 </button>
                             {% elif session.user|lower == entry.created_by|lower %}
-                                <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="btn-flat btn-large cyan darken-3"><i class="fas fa-pencil-alt"></i></a>
+                                <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="btn-flat btn-large cyan darken-3">
+                                    <i class="fas fa-pencil-alt"></i></a>
                                 <button data-target="{{ entry._id }}" class="btn-flat btn-large modal-trigger red darken-1">
                                         <i class="fas fa-times-circle"></i>
                                 </button>
