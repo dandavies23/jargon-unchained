@@ -21,8 +21,9 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/get_jargon")
 def get_jargon():
-    jargon = list(mongo.db.jargon.find())
+    jargon = list(mongo.db.jargon.find().sort("_id", -1))
     return render_template("jargon.html", jargon=jargon)
+# lists jargon newest first for relevancy and encourage contribution
 
 
 @app.route("/az_jargon")
@@ -30,6 +31,7 @@ def az_jargon():
     jargon = list(mongo.db.jargon.find().sort("jargon_name", 1))
     print(jargon)
     return render_template("jargon.html", jargon=jargon)
+
 
 @app.route("/za_jargon")
 def za_jargon():
@@ -138,7 +140,8 @@ def add_jargon():
             "usage": request.form.get("usage"),
             "category_name": request.form.get("category_name"),
             "editorialise": request.form.get("editorialise"),
-            "created_by": session["user"]
+            "created_by": session["user"],
+            "love_percent": 55
         }
         # add rating to dictionary? or create as separate field?
         mongo.db.jargon.insert_one(jargon)
@@ -159,6 +162,9 @@ def edit_jargon(entry_id):
             "category_name": request.form.get("category_name"),
             "editorialise": request.form.get("editorialise"),
             "created_by": session["user"]
+            # "love_percent": request.form.get("love_percent")
+            # "love_percent": entry_id.love_percent
+            # "love_percent": mongo.db.jargon("love_percent")
         }
         # add rating to dictionary? or create as separate field?
         mongo.db.jargon.update({"_id": ObjectId(entry_id)}, submit)
