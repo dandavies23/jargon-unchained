@@ -40,6 +40,19 @@ def za_jargon():
     return render_template("jargon.html", jargon=jargon)
 
 
+@app.route("/like/<entry_id>")
+def like(entry_id):
+    entry = mongo.db.jargon.find_one({"_id": ObjectId(entry_id)})
+    value = int(entry["love_percent"][0])
+    value += 1
+    value = str(value)
+    entry.update_one({"_id": ObjectId(entry_id)},
+        {"$set": {
+            love_percent[0]: value
+        }})
+    return render_template("jargon.html")
+
+
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
