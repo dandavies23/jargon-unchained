@@ -43,10 +43,10 @@ def za_jargon():
 @app.route("/like/<entry_id>")
 def like(entry_id):
     entry = mongo.db.jargon.find_one({"_id": ObjectId(entry_id)})
-    value = int(entry["love_percent"][0])
+    value = int(entry["love_percent"])
     value += 1
     value = str(value)
-    entry.update_one({"_id": ObjectId(entry_id)},
+    mongo.db.jargon.update_one({"_id": ObjectId(entry_id)},
         {"$set": {
             love_percent[0]: value
         }})
@@ -154,7 +154,7 @@ def add_jargon():
             "category_name": request.form.get("category_name"),
             "editorialise": request.form.get("editorialise"),
             "created_by": session["user"],
-            "love_percent": 55
+            "love_percent": "55"
         }
         # add rating to dictionary? or create as separate field?
         mongo.db.jargon.insert_one(jargon)
