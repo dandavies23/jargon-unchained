@@ -25,32 +25,57 @@ def get_jargon():
     return render_template("jargon.html", jargon=jargon)
 # lists jargon newest first for relevancy and encourage contribution
 
-
+# returns the list alphabetically
 @app.route("/az_jargon")
 def az_jargon():
     jargon = list(mongo.db.jargon.find().sort("jargon_name", 1))
-    print(jargon)
     return render_template("jargon.html", jargon=jargon)
 
-
+# returns the list reverse alpha
 @app.route("/za_jargon")
 def za_jargon():
-    jargon = list(mongo.db.jargon.find().sort("jargon_name", -1))
+    jargon = list(mongo.db.jargon.find().sort("jargon_name", 1))
+    return render_template("jargon.html", jargon=jargon)
+
+
+@app.route("/rank_jargon")
+def rank_jargon():
+    jargon = list(mongo.db.jargon.find())
+    for i in range(len(jargon)):
+        jargon[i]["love_percent"] = int(jargon[i]["love_percent"])
+    jargon = sorted(jargon, key=lambda i: (i['love_percent']))
     print(jargon)
     return render_template("jargon.html", jargon=jargon)
 
 
+# increments love percent by 1
 @app.route("/like/<entry_id>")
 def like(entry_id):
     entry = mongo.db.jargon.find_one({"_id": ObjectId(entry_id)})
     value = int(entry["love_percent"])
+    print (value)
     value += 1
     value = str(value)
     mongo.db.jargon.update_one({"_id": ObjectId(entry_id)},
         {"$set": {
-            love_percent[0]: value
+            "love_percent": value
         }})
-    return render_template("jargon.html")
+    return redirect(url_for("get_jargon"))
+
+
+# increments love percent by 1
+@app.route("/dislike/<entry_id>")
+def dislike(entry_id):
+    entry = mongo.db.jargon.find_one({"_id": ObjectId(entry_id)})
+    value = int(entry["love_percent"])
+    print (value)
+    value -= 1
+    value = str(value)
+    mongo.db.jargon.update_one({"_id": ObjectId(entry_id)},
+        {"$set": {
+            "love_percent": value
+        }})
+    return redirect(url_for("get_jargon"))
 
 
 @app.route("/search", methods=["GET", "POST"])

@@ -59,7 +59,7 @@
                         {% endif %}  
                         <div class="col s-12 m-9 l10 text-center cyan-text text-darken-3 dict-cta">
                             <a href="{{url_for('like', entry_id=entry._id)}}"><i class="far fa-thumbs-up"></i></a>
-                            <i class="far fa-thumbs-down"></i>
+                            <a href="{{url_for('dislike', entry_id=entry._id)}}"><i class="far fa-thumbs-down"></i></a>
                             {% if session.user|lower == "admin"|lower %}
                                 <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="btn-flat btn-large cyan darken-3">
                                     <i class="fas fa-pencil-alt"></i></a>
@@ -74,7 +74,7 @@
                                 </button>
                             {% else %}
                             {% endif %}
-                            <i class="fas fa-sort-numeric-down-alt"></i>
+                            <a href="{{ url_for('rank_jargon') }}"><i class="fas fa-sort-numeric-down-alt"></i></a>
                             <a href="{{ url_for('az_jargon') }}"><i class="fas fa-sort-alpha-down"></i></a>
                             <a href="{{ url_for('za_jargon') }}"><i class="fas fa-sort-alpha-up"></i></a>        
                         </div>
