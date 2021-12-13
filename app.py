@@ -270,16 +270,16 @@ def delete_category(category_id):
 
 @app.route("/load_databases/")
 def load_databases():
-    mongo.db.jargon.insertMany( [
+    mongo.db.jargon.insert_many([
         {"jargon_name": "Test", "definition": "This is a test",
-        "usage": "Test right here", 
-        "category_name":"Nouns as verbs", 
-        "created_by": "lenguff", "love_percent": "50"},
+         "usage": "Test right here", 
+         "category_name": "Nouns as verbs", 
+         "created_by": "lenguff", "love_percent": "50"},
         {"jargon_name": "Another test", "definition": "Test again", 
-        "usage": "How would you?", 
-        "category_name": "Nouns as verbs", "editorialise": "", 
-        "created_by": "dandavies23", "love_percent": "23"},
-    ] )
+         "usage": "How would you?", 
+         "category_name": "Nouns as verbs", "editorialise": "", 
+         "created_by": "dandavies23", "love_percent": "23"},
+    ])
     return redirect(url_for("get_categories"))
 
 
