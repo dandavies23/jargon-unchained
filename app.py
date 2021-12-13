@@ -18,6 +18,7 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+# Main dictionary routes
 @app.route("/")
 @app.route("/get_jargon")
 def get_jargon():
@@ -25,11 +26,13 @@ def get_jargon():
     return render_template("jargon.html", jargon=jargon)
 # lists jargon newest first for relevancy and encourage contribution
 
+
 # returns the list alphabetically
 @app.route("/az_jargon")
 def az_jargon():
     jargon = list(mongo.db.jargon.find().sort("jargon_name", 1))
     return render_template("jargon.html", jargon=jargon)
+
 
 # returns the list reverse alpha
 @app.route("/za_jargon")
@@ -38,6 +41,7 @@ def za_jargon():
     return render_template("jargon.html", jargon=jargon)
 
 
+# returns the list by score
 @app.route("/rank_jargon")
 def rank_jargon():
     jargon = list(mongo.db.jargon.find())
@@ -75,6 +79,7 @@ def dislike(entry_id):
     return redirect(url_for("get_jargon"))
 
 
+# search based on query in MongoDB
 @app.route("/search", methods=["GET", "POST"])
 def search():
     query = request.form.get("query")
@@ -82,6 +87,7 @@ def search():
     return render_template("jargon.html", jargon=jargon)
 
 
+# Register wiring
 @app.route("/register", methods=["GET", "POST"])
 def register():
     if request.method == "POST":
@@ -178,7 +184,7 @@ def add_jargon():
             "created_by": session["user"],
             "love_percent": "55"
         }
-        # add rating to dictionary? or create as separate field?
+        # add added default love percent score to entry
         mongo.db.jargon.insert_one(jargon)
         flash("Jargon added to dictionary")
         return redirect(url_for("get_jargon"))
@@ -187,6 +193,7 @@ def add_jargon():
     return render_template("add_jargon.html", categories=categories)
 
 
+# edit jargon protocol
 @app.route("/edit_jargon/<entry_id>", methods=["GET", "POST"])
 def edit_jargon(entry_id):
     if request.method == "POST":
@@ -198,8 +205,6 @@ def edit_jargon(entry_id):
             "editorialise": request.form.get("editorialise"),
             "created_by": session["user"],
             "love_percent": request.form.get("love_percent")
-            # "love_percent": entry_id.love_percent
-            # "love_percent": mongo.db.jargon("love_percent")
         }
         # add rating to dictionary? or create as separate field?
         mongo.db.jargon.update({"_id": ObjectId(entry_id)}, submit)
@@ -210,6 +215,8 @@ def edit_jargon(entry_id):
     categories = mongo.db.categories.find().sort("category_name", 1)
     return render_template("edit_jargon.html", entry=entry, categories=categories)
 
+
+# delete jargon
 @app.route("/delete_jargon/<entry_id>")
 def delete_jargon(entry_id):
     mongo.db.jargon.remove({"_id": ObjectId(entry_id)})
@@ -217,11 +224,13 @@ def delete_jargon(entry_id):
     return redirect(url_for("get_jargon"))
 
 
+# categories
 @app.route("/get_categories")
 def get_categories():
     # sort categories alphabetically and return as list
     categories = list(mongo.db.categories.find().sort("category_name", 1))
     return render_template("categories.html", categories=categories)
+
 
 
 @app.route("/add_category", methods=["GET", "POST"])
