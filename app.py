@@ -272,12 +272,12 @@ def delete_category(category_id):
 def load_databases():
     mongo.db.jargon.insert_many([
         {"jargon_name": "Test", "definition": "This is a test",
-         "usage": "Test right here", 
-         "category_name": "Nouns as verbs", 
+         "usage": "Test right here",
+         "category_name": "Nouns as verbs",
          "created_by": "lenguff", "love_percent": "50"},
-        {"jargon_name": "Another test", "definition": "Test again", 
+        {"jargon_name": "Another test", "definition": "Test again",
          "usage": "How would you?", 
-         "category_name": "Nouns as verbs", "editorialise": "", 
+         "category_name": "Nouns as verbs", "editorialise": "",
          "created_by": "dandavies23", "love_percent": "23"},
     ])
     return redirect(url_for("get_categories"))
