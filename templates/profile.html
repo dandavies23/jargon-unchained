@@ -7,7 +7,6 @@
                 <h3 class="center-align cyan-text text-darken-3">
                     {{ username }}'s Profile
                 </h3>
-                <!-- Add contributed words - with option to edit -->
             </div>
         </div>
     </div>
@@ -21,8 +20,9 @@
     <!-- using the same template from category cards 
     need to display entries by user -->
     <div class="row">
-        <div class="col s12 m6 l4">
+        
             {% for entry in jargon %}
+            <div class="col s12 m6 l4">
                 {% if session.user|lower == entry.created_by|lower %}
                     <div class="card cyan center-align">
                         <div class="card-content white-text">
@@ -32,7 +32,7 @@
                             <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}">
                                 <i class="btn-flat cyan darken-2 fas fa-pencil-alt"></i>
                             </a>
-                            <button data-target="{{ entry_id }}" class="btn-flat modal-trigger red darken-1">
+                            <button data-target="{{ entry._id }}" class="btn-flat modal-trigger red darken-1">
                                 <i class="fas fa-times-circle"></i>
                             </button>
                         </div>
@@ -52,6 +52,7 @@
                 {% else %}
                     <h3>You don't have any entries</h3>
                 {% endif %}
+            </div>
             {% endfor %}            
         </div>       
     </div>

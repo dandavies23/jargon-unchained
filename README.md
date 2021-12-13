@@ -40,11 +40,11 @@ Larger resources such as [Online Etymology Dictionary](http://www.etymonline.com
 
 A similarly large resource by a British academic Gary Martin is [The Phrase Finder](https://www.phrases.org.uk/). It’s scope is even broader but from a UX perspective the home page suffers from feature creep. With a flattened word cloud dominating the right hand side, the alphabet on the left is most useful search. The most interesting homepage function is the 'most popular today’ section.
 
-![Phrase Finder Home](readme/competitors/OnlineEtymologyDictionary.png)
+![Phrase Finder Home](readme/competitors/PhraseFinderHome.png)
 
 The full list and well using the well structured taxonomy is the best way to navigate.
 
-![Phrase Finder Full List](readme/competitors/PhraseFinderHome.png)
+![Phrase Finder Full List](readme/competitors/PhraseFinderFullList.png)
 
 Clicking on the ‘Work’ category does take you to around [30 of business jargon words](https://www.phrases.org.uk/meanings/business-and-work-related-phrases.html). It’s also worth pointing out that whilst in terms of tonally it’s a much more serious site. Once you’ve stepped through the navigation and reached the database - the UI is clean, fast focussed and learnable.
 
