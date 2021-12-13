@@ -160,7 +160,8 @@ def profile(username):
         {"username": session["user"]})["username"]
 
     if session["user"]:
-        return render_template("profile.html", username=username)
+        jargon = mongo.db.jargon.find({"created_by": username})
+        return render_template("profile.html", username=username, jargon=jargon)
     return redirect(url_for("login"))
 
 
@@ -264,6 +265,21 @@ def edit_category(category_id):
 def delete_category(category_id):
     mongo.db.categories.remove({"_id": ObjectId(category_id)})
     flash("Category successfully deleted")
+    return redirect(url_for("get_categories"))
+
+
+@app.route("/load_databases/")
+def load_databases():
+    mongo.db.jargon.insertMany( [
+        {"jargon_name": "Test", "definition": "This is a test",
+        "usage": "Test right here", 
+        "category_name":"Nouns as verbs", 
+        "created_by": "lenguff", "love_percent": "50"},
+        {"jargon_name": "Another test", "definition": "Test again", 
+        "usage": "How would you?", 
+        "category_name": "Nouns as verbs", "editorialise": "", 
+        "created_by": "dandavies23", "love_percent": "23"},
+    ] )
     return redirect(url_for("get_categories"))
 
 
