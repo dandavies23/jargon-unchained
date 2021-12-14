@@ -20,7 +20,7 @@
         <div class="col hide-on-small-only m5 l3 pull-m7 pull-l9">
             <ul class="section table-of-contents pinned">
                 {% for entry in jargon %}
-                <li><a href="#{{ entry.jargon_name }}">{{ entry.jargon_name }}</a></li>
+                <li><a href="#{{ entry.jargon_name -}}">{{ entry.jargon_name }}</a></li>
                 {% endfor %}
             </ul>
         </div>      
@@ -58,25 +58,25 @@
                         {% else %}
                         {% endif %}  
                         <div class="col s-12 m-9 l10 text-center cyan-text text-darken-3 dict-cta">
-                            <a href="{{url_for('like', entry_id=entry._id)}}"><i class="far fa-thumbs-up"></i></a>
-                            <a href="{{url_for('dislike', entry_id=entry._id)}}"><i class="far fa-thumbs-down"></i></a>
+                            <a href="{{url_for('like', entry_id=entry._id)}}" class="sort-btn"><i class="far fa-thumbs-up"></i></a>
+                            <a href="{{url_for('dislike', entry_id=entry._id)}}" class="sort-btn"><i class="far fa-thumbs-down"></i></a>
                             {% if session.user|lower == "admin"|lower %}
-                                <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="btn-flat btn-large cyan darken-3">
+                                <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="btn-large waves-light cyan darken-3">
                                     <i class="fas fa-pencil-alt"></i></a>
-                                <button data-target="{{ entry._id }}" class="btn-flat btn-large modal-trigger red darken-1">
+                                <button data-target="{{ entry._id }}" class="btn-large waves-light modal-trigger red darken-1">
                                     <i class="fas fa-times-circle"></i>
                                 </button>
                             {% elif session.user|lower == entry.created_by|lower %}
-                                <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="btn-flat btn-large cyan darken-3">
+                                <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="btn-large waves-light cyan darken-3">
                                     <i class="fas fa-pencil-alt"></i></a>
-                                <button data-target="{{ entry._id }}" class="btn-flat btn-large modal-trigger red darken-1">
+                                <button data-target="{{ entry._id }}" class="btn-large waves-effect waves-light modal-trigger red darken-1">
                                         <i class="fas fa-times-circle"></i>
                                 </button>
                             {% else %}
                             {% endif %}
-                            <a href="{{ url_for('rank_jargon') }}"><i class="fas fa-sort-numeric-down-alt"></i></a>
-                            <a href="{{ url_for('az_jargon') }}"><i class="fas fa-sort-alpha-down"></i></a>
-                            <a href="{{ url_for('za_jargon') }}"><i class="fas fa-sort-alpha-up"></i></a>        
+                            <a href="{{ url_for('rank_jargon') }}" class="sort-btn"><i class="fas fa-sort-numeric-down-alt"></i></a>
+                            <a href="{{ url_for('az_jargon') }}" class="sort-btn"><i class="fas fa-sort-alpha-down"></i></a>
+                            <a href="{{ url_for('za_jargon') }}" class="sort-btn"><i class="fas fa-sort-alpha-up"></i></a>        
                         </div>
                         <!-- Modal Delete Warning -->
                         <div id="{{ entry._id }}" class="modal">

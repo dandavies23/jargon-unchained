@@ -44,4 +44,14 @@
 
 a {
     color: #00acc1;
+    transition: all 0.2s linear;
 }
+
+a.sort-btn:hover {
+    color:#006064; 
+}
+
+.custom-cyan {
+    background-color: #39c2c8 !important;
+}
+
