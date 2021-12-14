@@ -328,6 +328,48 @@ Frameworks, Libraries & Programs Used
 
  
 
+# Deployment
+1. Connecting the Application to MongoDB
+2. Logged into my MongoDB account.
+3. With the "Clusters" tab selected, click on "Connect"
+4. Select "Connect your application"
+5. Select "Python" as the "Driver" and "Version" "3.6 or later".
+
+## Heroku Deployment
+Before following the steps listed below, a requirements.txt file and a Procfile were created and pushed to GitHub using the following commands:
+
+    pip3 freeze --local > requirements.txt
+    echo web: python app.py > Procfile
+
+Then to integrate APScheduler into the application to automate the awards() & new competition processess I added a second dyno to my Procfile --> clock: python jobs.py Referring to the jobs.py file where the scheduled jobs are listed.
+
+Use the Heroku CLI to scale up the clock process using the command: heroku ps:scale clock=1
+
+The application was deployed via Heroku using this process:
+Navigated to Heroku
+Signed into my Heroku account.
+Selected "New" on the dashboard and then "Create new application" option as below:
+
+
+Selected a name for my application, selected "Europe" as the region and clicked "Create app".
+
+
+5. With the "Deploy" tab selected, "GitHub - Connect to GitHub" was chosen as the deployment method.
+
+
+6. Make GitHub profile is, click "connect" next to the GitHub repository for this project.
+
+
+7. Navigate to the "Settings" tab and clicked on "Reveal Convig Vars".
+Added configuration variables to Heroku.
+Navigated back to the "Deploy" tab and selected "Enable Automatic Deploys" with the master branch selected from the dropdown box.
+
+10. Then clicked on "Deploy Branch" also with master selected.
+
+11. Site is deployed and any changes are automatically deployed each time they are updated and pushed to GitHub during development.
+
+
+
 Other thanks and acknowledgments
 --------------------------------
 
