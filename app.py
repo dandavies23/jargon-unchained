@@ -59,9 +59,9 @@ def like(entry_id):
     value += 1
     value = str(value)
     mongo.db.jargon.update_one({"_id": ObjectId(entry_id)},
-        {"$set": {
-            "love_percent": value
-        }})
+                               {"$set": {
+                                   "love_percent": value
+                               }})
     return redirect(url_for("get_jargon"))
 
 
@@ -73,9 +73,9 @@ def dislike(entry_id):
     value -= 1
     value = str(value)
     mongo.db.jargon.update_one({"_id": ObjectId(entry_id)},
-        {"$set": {
-            "love_percent": value
-        }})
+                               {"$set": {
+                                   "love_percent": value
+                               }})
     return redirect(url_for("get_jargon"))
 
 
@@ -233,7 +233,6 @@ def get_categories():
     return render_template("categories.html", categories=categories)
 
 
-
 @app.route("/add_category", methods=["GET", "POST"])
 def add_category():
     if request.method == "POST":
@@ -276,7 +275,7 @@ def load_databases():
          "category_name": "Nouns as verbs",
          "created_by": "lenguff", "love_percent": "50"},
         {"jargon_name": "Another test", "definition": "Test again",
-         "usage": "How would you?", 
+         "usage": "How would you?",
          "category_name": "Nouns as verbs", "editorialise": "",
          "created_by": "dandavies23", "love_percent": "23"},
     ])

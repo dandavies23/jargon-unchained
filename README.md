@@ -1,12 +1,15 @@
 Jargon Unchained
 ================
 
+![Jargon Unchained Mockup](readme/JargonUnchainedMockUp.png)
+
+
 Introduction
 ------------
 
 Jargon Unchained was first published as an entertaining [business jargon e-book](https://leanpub.com/jargonunchained) a seven years ago. The book’s writer and stakeholder “Len Guff” published under pseudonym as even though the book was humorous in tone, its target was the B2B industry in which he worked.
 
-Its intended audience were people, like him, who were perhaps newly-qualifed or fresh from university and were hearing bosses and CEOs employing jargon which sounded smart but was perhaps fundamentally stupid. (This said there has been interest from business people who use the jargon but are interested in its correct etymology and correct usage….)
+Its intended audience were people, like him, who were perhaps newly-qualifed or fresh from university and were hearing bosses and CEOs employing jargon which sounded smart but was perhaps fundamentally stupid. This said there has been interest from business people who use the jargon but are interested in its correct etymology and correct usage.
 
  
 
@@ -22,8 +25,6 @@ In interview the author claimed his intended growth strategy was to:
 3.  A growing and interested audience could then be nudged pay more to but volume 3 outright.
 
 Now nearly 8 years after it was conceived the author admits that it has been difficult to maintain momentum and grow Jargon Unchained’s customer base. Also as a largely solo practice of collation and compilation, new words for the further volumes has taken longer than first estimated. The author pointed out that some original words have changed, disappeared or been more broadly adopted. This web app should revitalise interest, ease the burden of compilation and nurture a community who are interested in taking the next ebook further. 
-
- 
 
 Competitor research
 -------------------
@@ -56,20 +57,20 @@ Although it’s worth noting that the social share buttons don’t work and the 
 
 In terms of simple and effective UI nurturing a strong community Jargon Unchained can learn a lot from [Urban Dictionary](https://www.urbandictionary.com/). Its is easy to contribute and interact, from visitors who can upvote and easily contribute, with simple search bar, shuffle function and login, through to a democratic contribution function.
 
- ![Urban Dictionary](readme/competitors/UrbanDictionary.png)
+![Urban Dictionary](readme/competitors/UrbanDictionary.png)
 
-Priorities - New strategy
--------------------------
+UX Priorities
+-------------
 
-1.  Get people to explore and enjoy the dictionary  
+1.  Get people to explore and enjoy the dictionary
 
-2.  Raise awareness of the first volume 
+2.  Raise awareness of the first ebook
 
 3.  Get people to interact and contribute to the dictionary
 
 4.  Build a community of contributors
 
-5.  Compile new entry into second volume
+5.  Compile new entries into second volume
 
  
 
@@ -78,11 +79,11 @@ User Stories
 
 ### First Time Visitor Goals
 
-1.  As a First Time Visitor, I want to understand the main purpose and tone of the site. 
+1.  As a First Time Visitor, I want to understand the main purpose and tone of the site.
 
-2.  As a First Time Visitor, I want to find or be surprised and entertained by past entries. I want to easily navigate and sort through the dictionary.
+2.  As a First Time Visitor, I want to find or be surprised and entertained by past entries. I want to easily navigate and search and sort through the dictionary.
 
-3.  As a First Time Visitor, I want to easily interact by up or down voting entries I like. It want it to be easy to comment and even contribute my own entries. 
+3.  As a First Time Visitor, I want to easily interact by up or down voting entries I like. I want it to be fairly frictionless to contribute my own entries.
 
  
 
@@ -92,11 +93,9 @@ User Stories
 
 2.  As a Returning Visitor, I want to see what entries are doing well.
 
-3.  As a Returning Visitor, I want to like and comment and share on other channels.
+3.  As a Returning Visitor, I want to write my own contributions and see how they are doing.
 
-4.  As a Returning Visitor, I want to write my own contributions and see how they are doing.
-
-5.   As a Returning Visitor, I want to write my own definitions and see how well my previous contributions are doing. Comment on other people’s definitions.
+4.  As a Returning Visitor, I want to write my own definitions and see how well my previous contributions are doing. 
 
  
 
@@ -106,68 +105,85 @@ User Stories
 
 2.  As a Frequent User, I want to see what entries are doing well.
 
-3.  As a Frequent User, I want to comment on other people’s contributions
-
-4.  As a Frequent User, I want to fix and enhance other contributions by adding or fixing more detailed rants (editor)
-
-5.  As a Frequent User, I want to work the site grow and getting the next volume of the ebook
+3.  As a Frequent User, I want to work the site grow and getting the next volume of the ebook published.
 
  
 
 Scope
 =====
 
-### Milestone 1 
+### Sprint 1: Scope  (1.5 weeks)
 
-Research look and layout the site with the 5 planes of UX (Research, ReadME, Wireframes)
+1.  Research look and layout the site with the 5 planes of UX (Research, ReadME, Wireframes) 
 
- 
+2.  Planning out work process deadlines, work structure and testing implementation
 
-### Milestone 2 
-
-Sprint 1: Code out site structure, repo and basic layout
-
-Sprint 2: Structure databases in MongoDB
-
-Sprint 3: Add current dictionary, pull through - **Deploy to Heroku**
+3.  GitHub’s project Kanban used to track development, improvements and bug fixes.
 
  
 
-### Milestone 3
+### Sprint 2: Structure (2 weeks)
 
-Sprint 1: Build user sign up and update pages
+1.  Code out site structure, repo and basic layout
 
-Sprint 2: Build dictionary, search and sort function.
+2.  Structure databases in MongoDB
 
-Sprint 3: Build vote up vote down functionality
-
- 
+3.  Add current dictionary, pull through - **Deploy to Heroku**
 
  
 
-UX considerations
------------------
+### Sprint 3 Structure / Skeleton
 
-The site is should be humorous in tone. It should be fun to use and enjoyable to lampoon business jargon. Some of the language used in the field should employ business jargon.
+1.  Build user sign up and update pages
+
+2.  Build dictionary, search and sort function.
+
+3.  Build vote up vote down functionality (2nd meeting with mentor)
+
+ 
+
+### Sprint 4 Skeleton and Surface
+
+1.  Testing and Bug fixes
+
+2.  Navbar fixing FA icons in place (3rd mentor meeting)
+
+3.  Styling of the site
+
+4.  Final testing
+
+ 
+
+Out of scope
+------------
+
+The intention of this first milestone is to achieve a working Minimal Viable Product (MVP). Energy and time was focussed on creating a database, it being functional from a user perspective.
+
+ 
+
+Tone considerations
+-------------------
+
+The site is should be humorous in tone. It should be fun to use and enjoyable to lampoon business jargon. Some of the language used in the field should employ business jargon. Research touchpoints for this are a blend between The Business Jargon Dictionary and Urban Dictionary.
 
  
 
 Design Ideas
 ------------
 
-Humour is important. Want to be in-sympathy with the original design. Would like to use the same colour and font of the original book. I would also like the ‘boss’ character speaking to the underling in the illustration to say a “random” phrase which people could click on and that would get you into the book. The first book would also feature on the site, perhaps persistently in the footer?
+Humour is important to how this page is pitched. It is in-sympathy with the original design. This is the influenced the colour choices of the original book. Materialize was well suited to the project as the dropshadow and other features are a little bit dated now. This became a bit of an issue with the site validation see: **TestingBugs.**
+
+Another out-of-scope feature was the home page. This would have had the the ‘boss’ character speaking to the underling in the illustration to say a “random” phrase which people could click on and that would get you into the book. 
+
+![Home page](readme/wireframes/Second Draft/Homescreen Desktop.png)
+
+My other wireframe considerations can be [accessed here](readme/wireframes) with more explanation why other choices weren't made in Bugs and Fixes.
 
  
 
 ### Colour Scheme
 
-The main primary background colour of the site is Teal #39c2c8. White text is used for text.
-
- 
-
-### Typography
-
-Header font is …
+The main primary background colour of the site is Cyan #39c2c8. The navbar is this custom color. Elsewhere in the site the [Materialize color scale](https://materializecss.com/color.html) is used and with secondary color “blue" as a sympathetic  better-defined contrast. Elsewhere Materialize’s dark green and red are used to signify access buttons/links or delete/quite.
 
  
 
@@ -177,171 +193,142 @@ No photos are used within this project. Illustrations best fit the tone of this 
 
  
 
- 
--
+Database rationale
+------------------
 
  
 
-Databases
----------
+### Category Collection
 
-A searchable dictionary of terms which can be voted up or down - similar to Urban Dictionary or Reddit.
+*Another way to group entries - used in search function for this Sprint iteration. *
+
+Category (category_name): Nouns as verbs
+
+\- Tortured metaphors
+
+\- Overcomplicated
+
+\- Plain nonsense
+
+\- -ise
 
  
 
-### User Database
+### Jargon Collection
+
+**Jargon** (jargon_name) (“Jargon" String: max-length:25 required)
+
+**Definition** (definition) “What does it really mean?" String: max-length:200 required)
+
+**Example sentence** (usage) **"**Use it in a sentence?“ String max-length: 100)
+
+**Optional rant: **(editorialise) "Why is it here? Why do you love and hate it? Can you make it right? Is it going to last?” String: 200 not-required could be editorialised for e-book) END of input field
+
+**Category** (category_name) from category collection
+
+**Love percentage** (love_percent) triggered by voting thumbs up / thumbs down (originally intended to be out of 110% but left uncapped for now)
+
+ 
+
+### User Collection
 
 **Business Handle** (“name” - chosen by user)
 
 **Password** (“password” - chosen by user)
 
-**E-Deets** (“email” - not for public but could be used - for login)
+**E-Deets** (“email” - not for public but could be used - for login) Not in scope for this sprint
 
 **User-level** (determined by Admin)
 
+In discussion with my mentor it was decided for this MVP that email grab wasn’t needed as verification protocol and technology isn’t in place. Further down the line it will be.
+
  
 
-### Comment database
+ 
+
+### Comment collection (Out of scope)
 
 Requires login to comment. Users are able to debate the correctness of the jargon. And possibly suggest updates or changes. Changes can be made only by the creator of the entry or and editor or higher user.
-
- 
-
-### Dictionary Database
-
-**Jargon** (“term” text: max-length:25 required)
-
-**Definition** (“meaning” text: max-length:200 required)
-
-**Use it in a sentence?** (“usage” text: max-length: 100)
-
-**Why it makes the list?** (“reason” text: max-length: 200 not-required could be editorialised for e-book)
-
-**Can we make it right?** Y/N (radio button not-required)
-
-**Why not? / How come?** (dependant on previous answer 200 not-required // could be editorialised for e-book)
-
-**Love to hate** (vote up) / **Hate to love** (vote down)
-
-**Here for the long run or a flash in the pan?** (“longevity” rating 1-110%!) [perhaps not needed]
-
-###  
 
  
 
 User types
 ----------
 
-[can turn this into a table…]
-
-Role | Outline | Functions
+ 
 
 **Visitor:** Can explore the dictionary and vote up and down (Read, Vote)
 
 **User:** able to write contribute their own phrases and definitions, they can also update and delete their own entries. (Read, Vote, Create, Update own records, Delete own records, Comment on others)
 
-**Editor:** able to check and update and delete other contributions. (Update, Delete others)
+**Editor:** able to check and update and delete other contributions. (Update, Delete other entries) - not in scope for this MVP.
 
-**Admin**: able to grant editor user level, rewrite delete other contributions, have final say on definition. (Read, Vote, Create, Update own records, Delete own records, Delete users, Prevent certain records from being altered further?)
+**Admin**: able to grant editor user level, rewrite delete other contributions, have final say on definition. (Read, Vote, Create, Update own records, Delete own records, Delete users)
 
+These roles were kept in mind for development but there wasn’t enough development time to implement. In this current sprint editor is currently frontend admin is backend and more complex administration is done in MongoDB. 
 
-## Gitpod Reminders
+ 
+## Testing and Bugs
+Testing and further details on compenents and features can be [found here](readme/TestingBugs.md).
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+Tools
+-----
 
-`python3 -m http.server`
+ 
 
-A blue button should appear to click: _Make Public_,
+Languages Used
+--------------
 
-Another blue button should appear to click: _Open Browser_.
+-   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+-   [CSS3](https://en.wikipedia.org/wiki/CSS)
 
-A blue button should appear to click: _Make Public_,
+-   [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-Another blue button should appear to click: _Open Browser_.
+-   [jQuery](https://en.wikipedia.org/wiki/JQuery)
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+-   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-To log into the Heroku toolbelt CLI:
+Frameworks, Libraries & Programs Used
+-------------------------------------
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+-   [Materialize 1.0.0](https://materializecss.com/) Used to provide the responsiveness and styling of the website as well as navigation bar, buttons, panel cards, scrollspy and cards reveal.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+-   [jQuery](https://jquery.com/) jQuery comes with Materialize to make the navbar and the application in a whole responsive.
 
-------
+-   [Flask](https://flask.palletsprojects.com/en/1.1.x/) Flask is the web framework for the app.
 
-## Release History
+-   [Jinja](https://jinja.palletsprojects.com/en/2.11.x/) Is used for the Python template.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+-   [Heroku](https://dashboard.heroku.com/) The cloud platform for deploying the app.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+-   [MongoDB](https://www.mongodb.com/1) The application data platform
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+-   [Werkzeug](https://werkzeug.palletsprojects.com/en/2.0.x/) Used for the for password hashing/authentication as well as authorization.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+-   [Git](https://git-scm.com/) Used Git for version control by utilizing the Gitpod terminal to commit to Git and Push to GitHub.
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+-   [GitHub](https://github.com/) GitHub stored the projects code after being pushed to Heroku via Flask
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+-   [Balsamiq](https://balsamiq.com/) To create initial wireframes for the project design - full wireframes can be seen here.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+-   [Photoshop](https://www.adobe.com/uk/products/photoshop/) Used to crop, resize and optimise main illustration
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+-   [W3C Markup Validation Service](https://validator.w3.org/) service for testing HTML
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+-   [W3C CSS Validation Service](https://jigsaw.w3.org/) Used to test CSS
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+-   [PEP8 online](http://pep8online.com/) I used this service for possible errors identification in the Python code
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+-   [Autopep8](https://pypi.org/project/autopep8/) used to clean
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+-   [Lighthouse](https://developers.google.com/web/tools/lighthouse) I used it to audit performance of the application
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+-   [Chrome DevTools ](https://developer.chrome.com/docs/devtools/)I used this service to test code changes and responsivity of landing page.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+ 
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+Other thanks and acknowledgments
+--------------------------------
 
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+Jargon Unchained was originally conceived by ‘Len Guff’ original copyright rests with him 2014 otherwise it’s me and the contributors. Illustration was by Dave Whittle. Thanks to Code Institute support including my mentor Antonio and Tutors Jo, Johan and Igo.I’m thankful for the support, and advise and tolerance from Jon Kennard, Juliet Spare, Tim Stacey and Darren Legore plus CI Slack and Stack Overflow communities. 
