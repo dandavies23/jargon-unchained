@@ -72,6 +72,39 @@
       {% block content %}
       {% endblock %}
     </main>
+    <footer class="page-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col l6 s12">
+            <h5 class="white-text">Jargon Unchained</h5>
+            <p class="grey-text text-lighten-4">The business of business language unwrapped in rants</p>
+          </div>
+          <h5 class="col l4 offset-14 s12">
+            <a href="https://leanpub.com/jargonunchained" class="white-text text-lighten-3 right">Get the book!
+              <img src="static/images/book-cover-cyan.jpg" class="footer-pic z-depth-3" alt="Jargon Unchained book on LeanPub">
+            </a>
+          </h5>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">© 2022 Len Guff
+        <ul class="right hide-on-med-and-down list-inline">
+          <li><a href="{{ url_for('get_jargon') }}" class="grey-text text-lighten-4">Dictionary</a></li>
+          {% if session.user %}
+            <li><a href="{{ url_for('add_jargon') }}" class="grey-text text-lighten-4">Contribute</a></li>
+            {% if session.user|lower == "admin"|lower %}
+              <li><a href="{{ url_for('get_categories') }}" class="grey-text text-lighten-4">Manage Categories</a></li>
+            {% endif %}
+            <li><a href="{{ url_for('profile', username=session['user']) }}" class="grey-text text-lighten-4">Profile</a></li>
+            <li><a href="{{ url_for('logout') }}" class="grey-text text-lighten-4">Log Out</a></li>
+          {% else %}
+            <li><a href="{{ url_for('register') }}" class="grey-text text-lighten-4">Join us</a></li>
+            <li><a href="{{ url_for('login') }}" class="grey-text text-lighten-4">Log In</a></li>
+          {% endif %}
+        </ul>
+        </div>
+      </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
