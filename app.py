@@ -32,6 +32,8 @@ def get_jargon():
 @app.route("/home")
 def load_homepage():
     # will need to add shuffle logic here
+
+    # jargon = mongo.db.jargon.aggregate([ { $sample: { "size": 1 } } ])
     return render_template("home.html")
 
 # returns the list alphabetically
@@ -47,6 +49,12 @@ def za_jargon():
     jargon = list(mongo.db.jargon.find().sort("jargon_name", 1))
     return render_template("jargon.html", jargon=jargon)
 
+
+# returns the list in random order 
+@app.route("/rand_jargon")
+def rand_jargon():
+    jargon = list(mongo.db.jargon.aggregate([{'$sample': {'size': 10 }}]))
+    return render_template("jargon.html", jargon=jargon)
 
 # returns the list by score
 @app.route("/rank_jargon")
