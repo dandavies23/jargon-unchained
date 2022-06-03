@@ -7,6 +7,8 @@ Jargon Unchained
 Introduction
 ------------
 
+Jargon Unchained 2.0 is the online app version of a business jargon dictionary. It is [deployed on Heroku](https://jargon-unchained.herokuapp.com/).
+
 Jargon Unchained was first published as an entertaining [business jargon e-book](https://leanpub.com/jargonunchained) a seven years ago. The book’s writer and stakeholder “Len Guff” published under pseudonym as even though the book was humorous in tone, its target was the B2B industry in which he worked.
 
 Its intended audience were people, like him, who were perhaps newly-qualifed or fresh from university and were hearing bosses and CEOs employing jargon which sounded smart but was perhaps fundamentally stupid. This said there has been interest from business people who use the jargon but are interested in its correct etymology and correct usage.
@@ -196,7 +198,7 @@ No photos are used within this project. Illustrations best fit the tone of this 
 Database rationale
 ------------------
 
- 
+ ![Relational Diagram](readme/JUC_Relational_Diagram.png)
 
 ### Category Collection
 
@@ -312,6 +314,8 @@ Frameworks, Libraries & Programs Used
 
 -   [Balsamiq](https://balsamiq.com/) To create initial wireframes for the project design - full wireframes can be seen here.
 
+- [DB Diagram](https://dbdiagram.io/d/6297ea0054ce26352742e082) To create database schema
+
 -   [Photoshop](https://www.adobe.com/uk/products/photoshop/) Used to crop, resize and optimise main illustration
 
 -   [W3C Markup Validation Service](https://validator.w3.org/) service for testing HTML
@@ -336,7 +340,7 @@ Frameworks, Libraries & Programs Used
 5. Select "Python" as the "Driver" and "Version" "3.6 or later".
 
 ## Heroku Deployment
-Before following the steps listed below, a requirements.txt file and a Procfile were created and pushed to GitHub using the following commands:
+Before following the steps listed below, a requirements.txt file and a Procfile were created and pushed to GitHub from Gitpod using the following commands:
 
     pip3 freeze --local > requirements.txt
     echo web: python app.py > Procfile
@@ -353,8 +357,7 @@ Selected "New" on the dashboard and then "Create new application" option as belo
 
 Selected a name for my application, selected "Europe" as the region and clicked "Create app".
 
-
-5. With the "Deploy" tab selected, "GitHub - Connect to GitHub" was chosen as the deployment method.
+5. With the "Deploy" tab selected, "GitHub - Connect to GitHub" was chosen as the deployment method. 
 
 
 6. Make GitHub profile is, click "connect" next to the GitHub repository for this project.
@@ -368,9 +371,23 @@ Navigated back to the "Deploy" tab and selected "Enable Automatic Deploys" with 
 
 11. Site is deployed and any changes are automatically deployed each time they are updated and pushed to GitHub during development.
 
+_NOTE: Due to a security issue, Heroku disabled automated deployments from GitHub during the development of this app. On [30th May 2022](https://status.heroku.com/incidents/2413) this was resolved but on 3rd June 2022 it was still disabled for this app. The following additional steps are needed to push to both repositories. There are additional steps if you have MFA/2FA authentication activated you need to retrieve the API key from the dashboard and use this when prompted._ 
 
+1. Open terminal in Gitpod.
+2. Get your app name from Heroku:
+Enter the following command in the terminal: heroku apps
+4.   Set the Heroku remote. (Replace <app_name> with your actual app name and remove the <> characters)
+Enter the following command in the terminal: heroku git:remote -a <app_name>
+5.   Add and commit any changes to your code, if applicable.
+Enter the following command in the terminal: 
+```git add . && git commit -m "Deploy to Heroku via CLI"``` 
+ 6.   Push to both GitHub and Heroku
+Enter the following command in the terminal: ```git push origin main```
+Enter the following command in the terminal: ```git push heroku main```
+
+_Whilst the problem persistes must do this every time you push to ensure that both repo's are the same_
 
 Other thanks and acknowledgments
 --------------------------------
 
-Jargon Unchained was originally conceived by ‘Len Guff’ original copyright rests with him 2014 otherwise it’s me and the contributors. Illustration was by Dave Whittle. Thanks to Code Institute support including my mentor Antonio and Tutors Jo, Johan and Igo.I’m thankful for the support, and advise and tolerance from Jon Kennard, Juliet Spare, Tim Stacey and Darren Legore plus CI Slack and Stack Overflow communities. 
+Jargon Unchained was originally conceived by ‘Len Guff’ original copyright rests with him 2014 otherwise it’s me and the contributors. Illustration was by Dave Whittle. Thanks to Code Institute support including my mentor Antonio and Tutors Jo, Johan and Igo.I’m thankful for the support, and advice and tolerance from Jon Kennard, Juliet Spare, Tim Stacey and Darren Legore plus CI Slack and Stack Overflow communities. 
