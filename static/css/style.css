@@ -1,7 +1,7 @@
 .brand-logo {
     display: flex !important;
-    font-size: 1.5rem !important;
     text-transform: uppercase;
+    font-size: 2.5rem !important;
     font-family: 'Londrina Outline', cursive;
 }
 
@@ -12,7 +12,10 @@
 
 @media (max-width: 540px) {
     .navbar-pic {
-        display: none;
+        display: none;}
+    .brand-logo {
+        font-size: 1.5rem !important;
+        font-family: 'Londrina Solid', 'Courier New';
     }
 }
 
@@ -24,11 +27,13 @@
 
 h1 {
     text-transform: uppercase;
-    font-family: 'Londrina Outline', cursive;
+    font-family: 'Londrina Outline', 'Courier New';
 }
 
 
-
+h4 {
+    font-family: 'Londrina Solid', cursive;
+}
 
 .flashes h4 {
     line-height: 2;
