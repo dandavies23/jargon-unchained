@@ -24,6 +24,10 @@ def load_homepage():
     jargon = mongo.db.jargon.aggregate([{'$sample': {'size': 1 }}])
     return render_template("home.html", jargon=jargon)
 
+@app.route("/about")
+def load_about():
+    return render_template("about.html")
+
 
 # Main dictionary routes
 @app.route("/get_jargon")
@@ -233,7 +237,7 @@ def edit_jargon(entry_id):
 # delete jargon
 @app.route("/delete_jargon/<entry_id>")
 def delete_jargon(entry_id):
-    mongo.db.jargon.remove({"_id": ObjectId(entry_id)})
+    mongo.db.jargon.delete_one({"_id": ObjectId(entry_id)})
     flash("Jargon entry deleted")
     return redirect(url_for("get_jargon"))
 
