@@ -1,22 +1,5 @@
 {% extends "base.html" %}
 {% block content %}
-    <div class="row card-panel grey lighten-5">
-        <form action="{{ url_for('search') }}" method="POST" class="col s12">
-            <div class="row valign-wrapper center-align">
-                <div class="input-field col s12 m8">
-                    <i class="fas fa-search prefix cyan-text text-darken-3"></i>
-                    <input type="text" name="query" id="query" minlength="3" class="validate" required>
-                    <label for="query" class="mobile-hide">Broaden your search envelope</label>
-                </div>
-                <div class="col s12 m4">
-                    <a href="{{ url_for('get_jargon') }}" class="red btn"><i class="fas fa-redo-alt"></i></a>
-                    <button type="submit" class="cyan darken-3 btn" style="padding-right: 0px">
-                        <i class="fas fa-search left"></i>
-                    </button>
-                </div>
-            </div>
-        </form>
-    </div>
     <div class="container">
         <div class="row">
             <h1 class="title">Jargon Unchained</h1>
@@ -24,40 +7,28 @@
             <div class="col s12 l-offset-s6">
                 {% for entry in jargon %}
                 <p class="center-align flow-text">&ldquo;{{ entry.usage }}&rdquo; 
-                    <a href="{{ url_for('load_homepage') }}"><i class="fas fa-random"></i></a>
-                    <a href=""><i class="fas fa-eye"></i></i></a></p>
-                {% endfor %}
+                    <a href="{{ url_for('load_homepage') }}"><i class="fas fa-random"></i> </a>
+                    <a href="/get_jargon#{{ entry.jargon_name -}}"><i class="fas fa-book-open"></i></a></p>
                 <ul class="collapsible">
                     <li>
-                        <div class="collapsible-header flow-text"><i class="far fa-comment-dots"></i> About rant</div>
+                        <div class="collapsible-header flow-text"><i class="far fa-comment-dots"></i> Extended Jargon entry</div>
                         <div class="collapsible-body flow-text">
                             <!-- I think collapsible is a good idea perhaps put the dictionary entry here -->
-                            <h4>Who is Len Guff?</h4>
-                            <p>Len Guff was just like you. Just trying to get by in the business world. Earning a crust in
-                                 the everyday office bants, high-fiving the right people, firmly-handshaking the old firm, 
-                                 mingling at huddles, turning out logs at fireside chats, listening to energetic entrepreneurs 
-                                 pass out PowerPoint pearls at public, publicity, press and PR talks. </p>
-                            <p>But something was grinding away at Guff. These people who claim to have the keys at the 
-                                keynotes, were pedalling nonsense. No-one from the breakout room to the power breakfast 
-                                buffet table was making any sense.</p>
-                            <p>They were just words, words that sounded right, words that fitted into a soundbite. 
-                                Phrases which were repeated because they encapsulated an idea or appeared to codify a new 
-                                approach. But under closer scrutiny they signified nothing. These were the entrepreneur’s new 
-                                clothes and Guff had had enough.</p>
-                            <p>So Len started to tap these business catchphrases and cliches into his phone. And he began to 
-                                pick them apart, to understand where they came from and to suggest how they could be made 
-                                better or binned. The result was an ebook which is still widely available.</p>
-                            <p>Now it’s time to align with a new paradigm. To truly digitise and digitalise. 
-                                The website is no longer about Len Guff. This website is about all of us. So the next time 
-                                someone throws out an empty phrase in the boardroom or the ten-minute standup - it’s time to 
-                                figuratively make a stand.  </p>
-                            <p>Put it on this site, so through extended ranting, we can make it better. And who knows if we 
-                                get enough momentum, traction or velocity (or, you know, words) we could turn out a new ebook. 
-                                Written by all of us. Because we are all Len Guff. </p>
+                            <h4>{{ entry.jargon_name }}</h4>
+                            <p class="flow-text"><strong>Definition: </strong>{{ entry.definition }}<br>
+                                <strong>Added by: </strong> {{ entry.created_by }}<br>
+                                <strong>Category: </strong>{{ entry.category_name }}<br>
+                                <strong>Love score: </strong>{{ entry.love_percent }}<br>
+                            </p>
+                            <p class="cyan-text text-darken-3">
+                                <a href="/get_jargon#{{ entry.jargon_name -}}"><i class="fas fa-book-open"></i> Jargon Dictionary</a><br>
+                                <a href="{{ url_for('load_homepage') }}"><i class="fas fa-random"></i> Shuffle again</a>
+                            </p>
 
                         </div>
                     </li>
-                </ul>    
+                </ul>
+                {% endfor %}    
             </div>
         </div>
     </div>
