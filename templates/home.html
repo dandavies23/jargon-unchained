@@ -7,7 +7,7 @@
             <div class="col s12 l-offset-s6">
                 {% for entry in jargon %}
                 <p class="center-align flow-text">&ldquo;{{ entry.usage }}&rdquo;</p>
-                <p class="center-align flow-text">
+                <p class="center-align dict-cta">
                     <a href="{{ url_for('load_homepage') }}" class="sort-btn home-btn"><i class="fas fa-random"></i> </a>
                     <a href="/get_jargon#{{ entry.jargon_name -}}" class="sort-btn home-btn"><i class="fas fa-book-open sort-btn"></i></a>
                 </p>
@@ -15,7 +15,6 @@
                     <li>
                         <div class="collapsible-header flow-text"><i class="far fa-comment-dots"></i> Extended Jargon entry</div>
                         <div class="collapsible-body flow-text">
-                            <!-- I think collapsible is a good idea perhaps put the dictionary entry here -->
                             <h4>{{ entry.jargon_name }}</h4>
                             <p class="flow-text"><strong>Definition: </strong>{{ entry.definition }}<br>
                                 <strong>Added by: </strong> {{ entry.created_by }}<br>
@@ -26,7 +25,6 @@
                                 <a href="/get_jargon#{{ entry.jargon_name -}}" class="sort-btn"><i class="fas fa-book-open"></i> Jargon Dictionary</a><br>
                                 <a href="{{ url_for('load_homepage') }}" class="sort-btn"><i class="fas fa-random"></i> Shuffle again</a>
                             </p>
-
                         </div>
                     </li>
                 </ul>

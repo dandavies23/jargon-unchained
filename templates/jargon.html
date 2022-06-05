@@ -17,12 +17,15 @@
                 </div>
             </form>
         </div>
-        <div class="col hide-on-small-only m5 l3 pull-m7 pull-l9">
-            <ul class="section table-of-contents pinned">
+        
+        <div class="col hide-on-small-only m5 l3 pull-m7 pull-l9 pinned">
+            
+            <ul class="section table-of-contents">
                 {% for entry in jargon %}
                 <li><a href="#{{ entry.jargon_name -}}">{{ entry.jargon_name }}</a></li>
                 {% endfor %}
             </ul>
+        </div>
         </div>      
         <div class="row">
             {% for entry in jargon %}

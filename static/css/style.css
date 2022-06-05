@@ -1,3 +1,4 @@
+/* Navbar */
 .brand-logo {
     display: flex !important;
     text-transform: uppercase;
@@ -25,6 +26,7 @@
     }
 }
 
+/* Heading styling */
 h1 {
     text-transform: uppercase;
     font-family: 'Londrina Outline', 'Courier New';
@@ -66,6 +68,7 @@ a.sort-btn:hover {
     color:#006064; 
 }
 
+/* currently not taking effect */
 home-btn {
     font-size: 250%;
     padding: 0vw 2vw;
