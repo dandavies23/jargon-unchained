@@ -6,9 +6,11 @@
             <img class="responsive-img" src="static/images/JUC-illustration.jpg">
             <div class="col s12 l-offset-s6">
                 {% for entry in jargon %}
-                <p class="center-align flow-text">&ldquo;{{ entry.usage }}&rdquo; 
-                    <a href="{{ url_for('load_homepage') }}"><i class="fas fa-random"></i> </a>
-                    <a href="/get_jargon#{{ entry.jargon_name -}}"><i class="fas fa-book-open"></i></a></p>
+                <p class="center-align flow-text">&ldquo;{{ entry.usage }}&rdquo;</p>
+                <div class="center-align flow-text">
+                    <a href="{{ url_for('load_homepage') }}" class="sort-btn"><i class="fas fa-random"></i> </a>
+                    <a href="/get_jargon#{{ entry.jargon_name -}}" class="sort-btn"><i class="fas fa-book-open sort-btn"></i></a>
+                </div>
                 <ul class="collapsible">
                     <li>
                         <div class="collapsible-header flow-text"><i class="far fa-comment-dots"></i> Extended Jargon entry</div>
@@ -21,8 +23,8 @@
                                 <strong>Love score: </strong>{{ entry.love_percent }}<br>
                             </p>
                             <p class="cyan-text text-darken-3">
-                                <a href="/get_jargon#{{ entry.jargon_name -}}"><i class="fas fa-book-open"></i> Jargon Dictionary</a><br>
-                                <a href="{{ url_for('load_homepage') }}"><i class="fas fa-random"></i> Shuffle again</a>
+                                <a href="/get_jargon#{{ entry.jargon_name -}}" class="sort-btn"><i class="fas fa-book-open"></i> Jargon Dictionary</a><br>
+                                <a href="{{ url_for('load_homepage') }}" class="sort-btn"><i class="fas fa-random"></i> Shuffle again</a>
                             </p>
 
                         </div>
