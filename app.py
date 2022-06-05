@@ -52,7 +52,7 @@ def za_jargon():
     return render_template("jargon.html", jargon=jargon)
 
 
-# returns the list in random order 
+# returns the list in random order
 @app.route("/rand_jargon")
 def rand_jargon():
     jargon = list(mongo.db.jargon.aggregate([{'$sample': {'size': 10 }}]))
