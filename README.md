@@ -387,6 +387,8 @@ Enter the following command in the terminal: ```git push heroku main```
 
 _Whilst the problem persistes must do this every time you push to ensure that both repo's are the same_
 
+_In order to push to Heroku you will need to login through the CLI for every Gitpod session. ``` heroku login -1 ``` using your emial as login and Heroku API as password._
+
 Other thanks and acknowledgments
 --------------------------------
 
