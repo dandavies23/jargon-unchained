@@ -4,8 +4,7 @@ Jargon Unchained
 ![Jargon Unchained Mockup](readme/JargonUnchainedMockUp.png)
 
 
-Introduction
-------------
+## Introduction
 
 Jargon Unchained 2.0 is the online app version of a business jargon dictionary. It is [deployed on Heroku](https://jargon-unchained.herokuapp.com/).
 
@@ -13,10 +12,8 @@ Jargon Unchained was first published as an entertaining [business jargon e-book]
 
 Its intended audience were people, like him, who were perhaps newly-qualifed or fresh from university and were hearing bosses and CEOs employing jargon which sounded smart but was perhaps fundamentally stupid. This said there has been interest from business people who use the jargon but are interested in its correct etymology and correct usage.
 
- 
 
-Former strategy
----------------
+## Former strategy
 
 In interview the author claimed his intended growth strategy was to:
 
@@ -26,10 +23,9 @@ In interview the author claimed his intended growth strategy was to:
 
 3.  A growing and interested audience could then be nudged pay more to but volume 3 outright.
 
-Now nearly 8 years after it was conceived the author admits that it has been difficult to maintain momentum and grow Jargon Unchained’s customer base. Also as a largely solo practice of collation and compilation, new words for the further volumes has taken longer than first estimated. The author pointed out that some original words have changed, disappeared or been more broadly adopted. This web app should revitalise interest, ease the burden of compilation and nurture a community who are interested in taking the next ebook further. 
+Now nearly 8 years after it was conceived the author admits that it has been difficult to maintain momentum and grow Jargon Unchained’s customer base. Also as a largely solo practice of collation, compiling new jargon for future volumes has taken longer than first estimated. The author pointed out that some original words have changed, disappeared or been more broadly adopted. This web app should revitalise interest, ease the burden of compilation and nurture a community who are interested in taking the next ebook further. 
 
-Competitor research
--------------------
+## Competitor research
 
 Many of Jargon Unchained’s competitors are similarly the product of sole-operators.
 
@@ -37,11 +33,11 @@ The stakeholder’s initial research discovered [World Wide Words](http://www.wo
 
 ![Worldwide words index](readme/competitors/WorldWideWordsIndex.png)
 
-Larger resources such as [Online Etymology Dictionary](http://www.etymonline.com/) are more robust with larger word lists largely compiled from other printed etmology books. It’s well researched by an American scholar and self-confessed early online amateur. But it is enthusiastically maintained with even a Google Chrome extension with an academically authoritative layout which is also functional. The search and letter navigation are easy to understand.
+Larger resources such as [Online Etymology Dictionary](http://www.etymonline.com/) are more robust with larger word lists largely compiled from other printed etmology books. It’s well researched by an American scholar and self-confessed early online amateur. The site's developoer enthusiastically maintains it, even building a Google Chrome extension. There is an academically authoritative layout which is also functional. The search and letter navigation are easy to understand.
 
 ![Online Etymology Dictionary](readme/competitors/OnlineEtymologyDictionary.png)
 
-A similarly large resource by a British academic Gary Martin is [The Phrase Finder](https://www.phrases.org.uk/). It’s scope is even broader but from a UX perspective the home page suffers from feature creep. With a flattened word cloud dominating the right hand side, the alphabet on the left is most useful search. The most interesting homepage function is the 'most popular today’ section.
+A similarly large resource by a British academic Gary Martin is [The Phrase Finder](https://www.phrases.org.uk/). Its scope is even broader but from a UX perspective the home page suffers from feature creep. With a flattened word cloud dominating the right hand side, the alphabet on the left is most useful search. The most interesting homepage function is the 'most popular today’ section.
 
 ![Phrase Finder Home](readme/competitors/PhraseFinderHome.png)
 
@@ -49,7 +45,7 @@ The full list and well using the well structured taxonomy is the best way to nav
 
 ![Phrase Finder Full List](readme/competitors/PhraseFinderFullList.png)
 
-Clicking on the ‘Work’ category does take you to around [30 of business jargon words](https://www.phrases.org.uk/meanings/business-and-work-related-phrases.html). It’s also worth pointing out that whilst in terms of tonally it’s a much more serious site. Once you’ve stepped through the navigation and reached the database - the UI is clean, fast focussed and learnable.
+Clicking on the ‘Work’ category does take you to around [30 business jargon words](https://www.phrases.org.uk/meanings/business-and-work-related-phrases.html). It’s also worth pointing out that whilst in terms of tonally it’s a much more serious site. Once you’ve stepped through the navigation and reached the database - the UI is clean, fast focussed and learnable.
 
 Much more inline with the humorous tone of Jargon Unchained is[The Business Jargon Dictionary](http://www.theofficelife.com/business-jargon-dictionary-A.html) created by The Office Life. Navigation is via the rounded alphabet old school typwriter letters. It has a moustachioed water-cooler and the brevity of the entries encourages contribution and makes them easily shareable.
 
@@ -61,8 +57,9 @@ In terms of simple and effective UI nurturing a strong community Jargon Unchaine
 
 ![Urban Dictionary](readme/competitors/UrbanDictionary.png)
 
-UX Priorities
--------------
+# UX and UI
+
+## UX Priorities
 
 1.  Get people to explore and enjoy the dictionary
 
@@ -76,8 +73,8 @@ UX Priorities
 
  
 
-User Stories
-------------
+## User Stories
+
 
 ### First Time Visitor Goals
 
@@ -107,12 +104,11 @@ User Stories
 
 2.  As a Frequent User, I want to see what entries are doing well.
 
-3.  As a Frequent User, I want to work the site grow and getting the next volume of the ebook published.
+3.  As a Frequent User, I want to watch the site grow and get the next volume of the ebook published.
 
  
 
-Scope
-=====
+## Scope
 
 ### Sprint 1: Scope  (1.5 weeks)
 
@@ -154,55 +150,97 @@ Scope
 
 4.  Final testing
 
+### Sprint 5 (v2)
+
+1. Update ReadMe to include further details on deployement and user journeys and wireframes
+
+2. Add home page (Skeleton and Surface)
+
+3. Add about section
+
+4. Add Jargon dictionary (see [bug #25](https://github.com/dandavies23/jargon-unchained/issues/25))
+
+5. Further bug fixing and testing to [Testing Bugs](readme/TestingBugs.md)
+
  
 
-Out of scope
-------------
+## Out of scope
 
-The intention of this first milestone is to achieve a working Minimal Viable Product (MVP). Energy and time was focussed on creating a database, it being functional from a user perspective.
+The intention of v1 was to achieve a working Minimal Viable Product (MVP). Energy and time was focussed on creating a database and it being functional from a user perspective. Extra features have been added to this version to enhance the user experience and better fulfil the user journeys. 
 
- 
+ ![Cover text](readme/jargonunchainedtext.png)
 
-Tone considerations
--------------------
+# Early considerations
+## Tone
 
 The site is should be humorous in tone. It should be fun to use and enjoyable to lampoon business jargon. Some of the language used in the field should employ business jargon. Research touchpoints for this are a blend between The Business Jargon Dictionary and Urban Dictionary.
 
  
 
-Design Ideas
-------------
+## Legacy
 
-Humour is important to how this page is pitched. It is in-sympathy with the original design. This is the influenced the colour choices of the original book. Materialize was well suited to the project as the dropshadow and other features are a little bit dated now. This became a bit of an issue with the site validation see: **TestingBugs.**
-
-Another out-of-scope feature was the home page. This would have had the the ‘boss’ character speaking to the underling in the illustration to say a “random” phrase which people could click on and that would get you into the book. 
-
-![Home page](readme/wireframes/Second Draft/Homescreen Desktop.png)
-
-My other wireframe considerations can be [accessed here](readme/wireframes) with more explanation why other choices weren't made in Bugs and Fixes.
-
- 
-
-### Colour Scheme
-
-The main primary background colour of the site is Cyan #39c2c8. The navbar is this custom color. Elsewhere in the site the [Materialize color scale](https://materializecss.com/color.html) is used and with secondary color “blue" as a sympathetic  better-defined contrast. Elsewhere Materialize’s dark green and red are used to signify access buttons/links or delete/quite.
-
- 
+Humour is important to how this website is pitched. It is in-sympathy with the original design. As much as is possible, there should be a love/hate relationship with the business jargon. As much as the words or phrases can be annoying it can also be usefuul to play with them.
 
 ### Imagery
 
 No photos are used within this project. Illustrations best fit the tone of this project as they are bring out humour. It’s important to emphasise that this is a fun project and a safe place to vent spleen.
 
- 
+## Typography
 
-Database rationale
+A font match was made with the title and the Londrina Outline Google font. But whilst the stretched cover version gave the book cover a touch of class:
+
+![Cover text](readme/jargonunchainedtext.png)
+
+The png logo version was difficult to scale down and read. For mobile screens Londrina Solid was used 
+
+![Moto G4 homepage](readme/moto-hompage.png)
+
+I found Londrina Solid was a good header font for the dictionary entries. It had a good character to it and was distinctive break from the entry text. 
+
+![Dictionary entries](readme/dictionary-entries.png)
+
+The body text font in the ebook is a fairly standard Helvetica-rooted font. I found the inbuilt Materialise default to do the job in terms of clarity. I also found Materialize's "[flow-text](https://materializecss.com/typography.html#flow)" made the text clear and readable on all pages across all platforms. 
+
+## Materialize
+
+I thought the [Materialize](https://materializecss.com/) framework was well suited to the project as the dropshadow and other features are a little bit dated now. This became a bit of an issue with the site validation see: [Testing Bugs](readme/TestingBugs.md).
+
+
+## Wireframes
+
+The initial wireframes were designed in the three main screen sizes - mobile, tablet and desktop. 
+
+![mobile](readme/wireframes/Second_Draft/mobiletabletdesktop.png)
+
+In v1 the homepage was out of scope but in v2 I was able to incorporate this. More detail on this is within the Features section. 
+
+![Home page](readme/wireframes/Second_Draft/HomescreenDesktop.png)
+
+The dictionary section remained largely unchanged. With the icons enabling the sort and filter functions. 
+
+![Dictionary entry](readme/wireframes/Second_Draft/Dictionaryentry.png)
+
+
+Although I thought it would be better to have the dictionary entries presented within a run. For later versions of the site to allow social sharing of entries I think I will reintroduce a single entry view as a URL. 
+
+My other wireframe considerations can be [accessed here](readme/wireframes) with more explanation why other choices weren't made in Bugs and Fixes.
+
+### Colour Scheme
+
+ This is the influenced the colour choices of the original book. The main primary background colour of the cover is Cyan #39c2c8. The navbar and footer are this "custom-color". Elsewhere in the site the [Materialize color scale](https://materializecss.com/color.html) darken/lighten is used to offer consistency within an acceptable range. Where white text was unreadable a black text on blue was chose. Elsewhere Materialize’s dark green and red are used for strong user buttons (create / delete).
+ 
+# Features
+
+# User Stories Testing
+
+## Database schema
 ------------------
 
  ![Relational Diagram](readme/JUC_Relational_Diagram.png)
 
 ### Category Collection
 
-*Another way to group entries - used in search function for this Sprint iteration. *
+*Another way to group entries - used in search function for this Sprint iteration.*
 
 Category (category_name): Nouns as verbs
 
@@ -224,7 +262,7 @@ Category (category_name): Nouns as verbs
 
 **Example sentence** (usage) **"**Use it in a sentence?“ String max-length: 100)
 
-**Optional rant: **(editorialise) "Why is it here? Why do you love and hate it? Can you make it right? Is it going to last?” String: 200 not-required could be editorialised for e-book) END of input field
+**Optional rant:** (editorialise) "Why is it here? Why do you love and hate it? Can you make it right? Is it going to last?” String: 200 not-required could be editorialised for e-book) END of input field
 
 **Category** (category_name) from category collection
 
@@ -244,20 +282,13 @@ Category (category_name): Nouns as verbs
 
 In discussion with my mentor it was decided for this MVP that email grab wasn’t needed as verification protocol and technology isn’t in place. Further down the line it will be.
 
- 
-
- 
-
 ### Comment collection (Out of scope)
 
 Requires login to comment. Users are able to debate the correctness of the jargon. And possibly suggest updates or changes. Changes can be made only by the creator of the entry or and editor or higher user.
 
  
 
-User types
-----------
-
- 
+## User types
 
 **Visitor:** Can explore the dictionary and vote up and down (Read, Vote)
 
@@ -273,13 +304,10 @@ These roles were kept in mind for development but there wasn’t enough developm
 ## Testing and Bugs
 Testing and further details on compenents and features can be [found here](readme/TestingBugs.md).
 
-Tools
------
-
+# Tools
  
 
-Languages Used
---------------
+## Languages Used
 
 -   [HTML5](https://en.wikipedia.org/wiki/HTML5)
 
@@ -291,8 +319,7 @@ Languages Used
 
 -   [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
 
-Frameworks, Libraries & Programs Used
--------------------------------------
+## Frameworks, Libraries & Programs Used
 
 -   [Materialize 1.0.0](https://materializecss.com/) Used to provide the responsiveness and styling of the website as well as navigation bar, buttons, panel cards, scrollspy and cards reveal.
 
@@ -389,7 +416,6 @@ _Whilst the problem persistes must do this every time you push to ensure that bo
 
 _In order to push to Heroku you will need to login through the CLI for every Gitpod session. ``` heroku login -i ``` using your email as login and Heroku API as password._
 
-Other thanks and acknowledgments
---------------------------------
+# Thanks and acknowledgments
 
-Jargon Unchained was originally conceived by ‘Len Guff’ original copyright rests with him 2014 otherwise it’s me and the contributors. Illustration was by Dave Whittle. Thanks to Code Institute support including my mentor Antonio and Tutors Jo, Johan and Igo.I’m thankful for the support, and advice and tolerance from Jon Kennard, Juliet Spare, Tim Stacey and Darren Legore plus CI Slack and Stack Overflow communities. 
+Jargon Unchained was originally conceived by ‘Len Guff’ original copyright rests with him 2014 otherwise it’s me and the contributors. Illustration was by Dave Whittle. Thanks to Code Institute support including my mentor Antonio and Tutors Jo, Johan and Igo. I’m thankful for the support, and advice and tolerance from Jon Kennard, Juliet Spare, Tim Stacy, Darren Legore and Pete Doyle plus CI Slack and Stack Overflow communities. 
