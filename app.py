@@ -24,6 +24,7 @@ def load_homepage():
     jargon = mongo.db.jargon.aggregate([{'$sample': {'size': 1 }}])
     return render_template("home.html", jargon=jargon)
 
+# About page app route
 @app.route("/about")
 def load_about():
     return render_template("about.html")

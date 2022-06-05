@@ -66,6 +66,11 @@ a.sort-btn:hover {
     color:#006064; 
 }
 
+home-btn {
+    font-size: 250%;
+    padding: 0vw 2vw;
+}
+
 .custom-cyan {
     background-color: #39c2c8 !important;
 }

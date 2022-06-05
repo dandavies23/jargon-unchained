@@ -7,10 +7,10 @@
             <div class="col s12 l-offset-s6">
                 {% for entry in jargon %}
                 <p class="center-align flow-text">&ldquo;{{ entry.usage }}&rdquo;</p>
-                <div class="center-align flow-text">
-                    <a href="{{ url_for('load_homepage') }}" class="sort-btn"><i class="fas fa-random"></i> </a>
-                    <a href="/get_jargon#{{ entry.jargon_name -}}" class="sort-btn"><i class="fas fa-book-open sort-btn"></i></a>
-                </div>
+                <p class="center-align flow-text">
+                    <a href="{{ url_for('load_homepage') }}" class="sort-btn home-btn"><i class="fas fa-random"></i> </a>
+                    <a href="/get_jargon#{{ entry.jargon_name -}}" class="sort-btn home-btn"><i class="fas fa-book-open sort-btn"></i></a>
+                </p>
                 <ul class="collapsible">
                     <li>
                         <div class="collapsible-header flow-text"><i class="far fa-comment-dots"></i> Extended Jargon entry</div>
