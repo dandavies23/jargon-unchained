@@ -17,6 +17,7 @@
                 </div>
             </form>
         </div>
+
         <div class="row">
             <div class="col hide-on-small-only m5 l3" style="position: sticky;top: 0;">
                 <ul class="section table-of-contents">
@@ -26,55 +27,54 @@
                 </ul>
             </div>    
             {% for entry in jargon %}
-            <div class="row">
             <div class="col s12 m7 l9">
                 <div id="{{ entry.jargon_name }}" class="section scrollspy">
                     <h4>{{ entry.jargon_name }}</h4>
-                        <p class="flow-text"><strong>Definition: </strong>{{ entry.definition }}<br>
-                        <strong>Usage: </strong>&ldquo;{{ entry.usage }}&rdquo;<br>
-                        <strong>Added by: </strong> {{ entry.created_by }}<br>
-                        <strong>Category: </strong>{{ entry.category_name }}<br>
-                        <strong>Love score: </strong>{{ entry.love_percent }}<br></p>
-                        {% if entry.editorialise %}
-                        <ul class="collapsible">
-                            <li>
-                                <div class="collapsible-header flow-text"><i class="far fa-comment-dots"></i> Extended rant</div>
-                                <div class="collapsible-body flow-text">{{ entry.editorialise }}</div>
-                            </li>
-                        </ul>
+                    <p class="flow-text"><strong>Definition: </strong>{{ entry.definition }}<br>
+                    <strong>Usage: </strong>&ldquo;{{ entry.usage }}&rdquo;<br>
+                    <strong>Added by: </strong> {{ entry.created_by }}<br>
+                    <strong>Category: </strong>{{ entry.category_name }}<br>
+                    <strong>Love score: </strong>{{ entry.love_percent }}<br></p>
+                {% if entry.editorialise %}
+                    <ul class="collapsible">
+                        <li>
+                            <div class="collapsible-header flow-text"><i class="far fa-comment-dots"></i> Extended rant</div>
+                            <div class="collapsible-body flow-text">{{ entry.editorialise }}</div>
+                        </li>
+                    </ul>
+                {% elif session.user|lower == entry.created_by|lower %}
+                    <ul class="collapsible">
+                        <li>
+                            <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="collapsible-header flow-text cyan darken-1 white-text">
+                                <i class="far fa-comment-dots"></i> Extended rant</a>
+                        </li>
+                    </ul>
+                {% elif session.user|lower == "admin"|lower %}  
+                    <ul class="collapsible">
+                        <li>
+                            <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="collapsible-header flow-text cyan darken-1 white-text">
+                                    <i class="far fa-comment-dots"></i> Extended rant</a>
+                        </li>
+                    </ul>
+                {% else %}
+                {% endif %}  
+                    <div class="col s-12 m-9 l10 text-center cyan-text text-darken-3 dict-cta">
+                        <a href="{{url_for('like', entry_id=entry._id)}}" class="sort-btn"><i class="far fa-thumbs-up"></i></a>
+                        <a href="{{url_for('dislike', entry_id=entry._id)}}" class="sort-btn"><i class="far fa-thumbs-down"></i></a>
+                        {% if session.user|lower == "admin"|lower %}
+                            <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="btn-large waves-light cyan darken-3">
+                                <i class="fas fa-pencil-alt"></i></a>
+                            <button data-target="{{ entry._id }}" class="btn-large waves-light modal-trigger red darken-1">
+                                <i class="fas fa-times-circle"></i>
+                            </button>
                         {% elif session.user|lower == entry.created_by|lower %}
-                        <ul class="collapsible">
-                            <li>
-                                <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="collapsible-header flow-text cyan darken-1 white-text">
-                                    <i class="far fa-comment-dots"></i> Extended rant</a>
-                            </li>
-                        </ul>
-                        {% elif session.user|lower == "admin"|lower %}  
-                        <ul class="collapsible">
-                            <li>
-                                <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="collapsible-header flow-text cyan darken-1 white-text">
-                                    <i class="far fa-comment-dots"></i> Extended rant</a>
-                            </li>
-                        </ul>
+                            <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="btn-large waves-light cyan darken-3">
+                                <i class="fas fa-pencil-alt"></i></a>
+                            <button data-target="{{ entry._id }}" class="btn-large waves-effect waves-light modal-trigger red darken-1">
+                                <i class="fas fa-times-circle"></i>
+                            </button>
                         {% else %}
-                        {% endif %}  
-                        <div class="col s-12 m-9 l10 text-center cyan-text text-darken-3 dict-cta">
-                            <a href="{{url_for('like', entry_id=entry._id)}}" class="sort-btn"><i class="far fa-thumbs-up"></i></a>
-                            <a href="{{url_for('dislike', entry_id=entry._id)}}" class="sort-btn"><i class="far fa-thumbs-down"></i></a>
-                            {% if session.user|lower == "admin"|lower %}
-                                <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="btn-large waves-light cyan darken-3">
-                                    <i class="fas fa-pencil-alt"></i></a>
-                                <button data-target="{{ entry._id }}" class="btn-large waves-light modal-trigger red darken-1">
-                                    <i class="fas fa-times-circle"></i>
-                                </button>
-                            {% elif session.user|lower == entry.created_by|lower %}
-                                <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}" class="btn-large waves-light cyan darken-3">
-                                    <i class="fas fa-pencil-alt"></i></a>
-                                <button data-target="{{ entry._id }}" class="btn-large waves-effect waves-light modal-trigger red darken-1">
-                                        <i class="fas fa-times-circle"></i>
-                                </button>
-                            {% else %}
-                            {% endif %}
+                        {% endif %}
                             <a href="{{ url_for('rank_jargon') }}" class="sort-btn"><i class="fas fa-sort-numeric-down-alt"></i></a>
                             <a href="{{ url_for('az_jargon') }}" class="sort-btn"><i class="fas fa-sort-alpha-down"></i></a>
                             <a href="{{ url_for('za_jargon') }}" class="sort-btn"><i class="fas fa-sort-alpha-up"></i></a>
@@ -94,7 +94,7 @@
                         </div>                    
                 </div>
             </div>
-            </div>
+            
             {% endfor %}    
         </div>
 {% endblock %}
