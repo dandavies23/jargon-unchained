@@ -1,4 +1,8 @@
 /* Navbar */
+.custom-cyan {
+    background-color: #39c2c8 !important;
+}
+
 .brand-logo {
     display: flex !important;
     text-transform: uppercase;
@@ -26,12 +30,13 @@
     }
 }
 
+
 /* Heading styling */
+
 h1 {
     text-transform: uppercase;
     font-family: 'Londrina Outline', 'Courier New';
 }
-
 
 h4 {
     font-family: 'Londrina Solid', 'Courier New';
@@ -41,12 +46,25 @@ h4 {
     line-height: 2;
 }
 
+
+/* Buttons */ 
+
+.btn-flat {
+    color: #ffff;
+}
+
 .dict-cta {
     text-align: center;
     font-size: 2.5rem;
     letter-spacing: 0.5vw;
 }
 
+a.sort-btn:hover {
+    color:#006064; 
+}
+
+
+/* Jargon Navigation */
 .table-of-contents a.active {
     border-left: 2px solid #39c2c8;
 }
@@ -55,8 +73,9 @@ h4 {
     border-left: 1px solid #39c2c8;
 }
 
-.btn-flat {
-    color: #ffff;
+.jargon-nav {
+    position: sticky;
+    top: 0;
 }
 
 a {
@@ -64,20 +83,7 @@ a {
     transition: all 0.2s linear;
 }
 
-a.sort-btn:hover {
-    color:#006064; 
-}
-
-/* currently not taking effect */
-home-btn {
-    font-size: 250%;
-    padding: 0vw 2vw;
-}
-
-.custom-cyan {
-    background-color: #39c2c8 !important;
-}
-
+/* Footer */
 body {
     display: flex;
     min-height: 100vh;
@@ -105,4 +111,11 @@ body {
     display: inline-block;
     padding-right: 5px;
     padding-left: 5px;
+  }
+
+  .list-inline a:hover {
+    transition: background-color .3s;
+    color: rgb(3, 81, 28);
+    display: block;
+    cursor: pointer;
   }
