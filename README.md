@@ -187,19 +187,19 @@ No photos are used within this project. Illustrations best fit the tone of this 
 
 ## Typography
 
-A font match was made with the title and the Londrina Outline Google font. But whilst the stretched cover version gave the book cover a touch of class:
+A font match was made with the title and the [Londrina Outline](https://fonts.google.com/specimen/Londrina+Outline) Google font. But whilst the stretched cover version gave the book cover a touch of class:
 
 ![Cover text](readme/jargonunchainedtext.png)
 
-The png logo version was difficult to scale down and read. For mobile screens Londrina Solid was used 
+The png logo version was difficult to scale down and read. For mobile screens [Londrina Solid](https://fonts.google.com/specimen/Londrina+Solid) was used 
 
 ![Moto G4 homepage](readme/moto-hompage.png)
 
-I found Londrina Solid was a good header font for the dictionary entries. It had a good character to it and was distinctive break from the entry text. 
+Londrina Solid was a good header font for the dictionary entries. It had a fun and playful character to it and was distinctive break from the entry text. 
 
 ![Dictionary entries](readme/dictionary-entries.png)
 
-The body text font in the ebook is a fairly standard Helvetica-rooted font. I found the inbuilt Materialise default to do the job in terms of clarity. I also found Materialize's "[flow-text](https://materializecss.com/typography.html#flow)" made the text clear and readable on all pages across all platforms. 
+The body text font in the ebook is a fairly standard Helvetica-rooted font. I found the inbuilt Materialise Roboto default to do the job in terms of clarity. I also found Materialize's "[flow-text](https://materializecss.com/typography.html#flow)" made the text clear and readable on all pages across all platforms. 
 
 ## Materialize
 
@@ -227,7 +227,16 @@ My other wireframe considerations can be [accessed here](readme/wireframes) with
 
 ### Colour Scheme
 
- This is the influenced the colour choices of the original book. The main primary background colour of the cover is Cyan #39c2c8. The navbar and footer are this "custom-color". Elsewhere in the site the [Materialize color scale](https://materializecss.com/color.html) darken/lighten is used to offer consistency within an acceptable range. Where white text was unreadable a black text on blue was chose. Elsewhere Materialize’s dark green and red are used for strong user buttons (create / delete).
+The navbar and footer use the same "custom-color" as the original ebook cover colour (Cyan #39C2C8). However this had poor contrast on [Coolors](https://coolors.co/contrast-checker/ffffff-39c2c8). 
+
+![Contrast Score custom cyan](readme/covercyan-contrast-check.png)
+
+To integrate the illustration the colour was kept in the header only with the navigation moved to a black and white side nav. A complimentary colour with a better score chosen for the footer. And flow-text was used to keep the font as large as possible.
+
+![Better scoring cyan](readme/better-scoring-cyan.png)
+
+
+Elsewhere in the site the [Materialize color scale](https://materializecss.com/color.html) darken/lighten is used to offer consistency within an acceptable range. For alerts a black text on blue was chosen. Elsewhere Materialize’s dark green was used for action icons/buttons and red are used for delete warning.
  
 # Features
 
