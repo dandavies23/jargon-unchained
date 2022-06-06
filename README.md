@@ -227,7 +227,7 @@ My other wireframe considerations can be [accessed here](readme/wireframes) with
 
 ### Colour Scheme
 
-The navbar and footer use the same "custom-color" as the original ebook cover colour (Cyan #39C2C8). However this had poor contrast on [Coolors](https://coolors.co/contrast-checker/ffffff-39c2c8). 
+The navbar and footer use the same "custom-color" as the original ebook cover colour (Cyan #39c2c8). However this had poor contrast on [Coolors](https://coolors.co/contrast-checker/ffffff-39c2c8). 
 
 ![Contrast Score custom cyan](readme/covercyan-contrast-check.png)
 
@@ -236,9 +236,42 @@ To integrate the illustration the colour was kept in the header only with the na
 ![Better scoring cyan](readme/better-scoring-cyan.png)
 
 
-Elsewhere in the site the [Materialize color scale](https://materializecss.com/color.html) darken/lighten is used to offer consistency within an acceptable range. For alerts a black text on blue was chosen. Materialize’s dark green was used for action icons/buttons and red are used for delete warning.
+Elsewhere in the site the [Materialize color scale](https://materializecss.com/color.html) darken/lighten is used to offer consistency within an acceptable range. Icons used "cyan-text text-darken-3" which scored well particularly large and unpadded in a button.
+
+![FA Icon Test](readme/coolors-cyan-text_text-darken-3.png)
+
+On hover further focus is drawn to the button. 
+
+![Hover contrast](readme/contrast-006064-hover.png)
+
+For alerts a black text on "cyan lighten-4" was chosen. 
+
+![Flashes cyan lighten-4](readme/cyan_lighten-4.png)
+
+Materialize’s "cyan darken-3" was also used for action icons and "cyan darken-4" for big buttons and "red darken-1" was a striking colour delete warning.
  
 # Features
+
+## Adaptive header nav
+- Uses brand colour
+- Flexes to all main screen sizes
+- Uses 'burger' and solid Londrina in portrait mobile 
+
+![Tablet and above nav](readme/adaptive-navbar-tablet.png)
+![Tablet admin](readme/adaptive-navbar-admin-view.png)
+![Below tablet nav](readme/adaptive-navbar<tablet.png)
+![Mobile Motorola](readme/mobile-portrait.png)
+
+## Homepage illustration shuffle and entry
+- Uses similar font to cover
+- Uses illustration from book
+- Offset quoote gives impressioon of 'boss' lecturing underling (Ken)
+- Option to 'shuffle' or find entry in dictionary
+- Extented entry: onpage disctionary entry 
+- [Thinking that possibly should have entry title?]
+
+![Homepaage splash](readme/homepage-splash.png)
+
 
 # User Stories Testing
 
