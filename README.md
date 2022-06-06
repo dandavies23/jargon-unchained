@@ -236,7 +236,7 @@ To integrate the illustration the colour was kept in the header only with the na
 ![Better scoring cyan](readme/better-scoring-cyan.png)
 
 
-Elsewhere in the site the [Materialize color scale](https://materializecss.com/color.html) darken/lighten is used to offer consistency within an acceptable range. For alerts a black text on blue was chosen. Elsewhere Materialize’s dark green was used for action icons/buttons and red are used for delete warning.
+Elsewhere in the site the [Materialize color scale](https://materializecss.com/color.html) darken/lighten is used to offer consistency within an acceptable range. For alerts a black text on blue was chosen. Materialize’s dark green was used for action icons/buttons and red are used for delete warning.
  
 # Features
 

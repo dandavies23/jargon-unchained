@@ -17,19 +17,17 @@
                 </div>
             </form>
         </div>
-        
-        <div class="col hide-on-small-only m5 l3 pull-m7 pull-l9 pinned">
-            
-            <ul class="section table-of-contents">
-                {% for entry in jargon %}
-                <li><a href="#{{ entry.jargon_name -}}">{{ entry.jargon_name }}</a></li>
-                {% endfor %}
-            </ul>
-        </div>
-        </div>      
         <div class="row">
+            <div class="col hide-on-small-only m5 l3" style="position: sticky;top: 0;">
+                <ul class="section table-of-contents">
+                    {% for entry in jargon %}
+                    <li><a href="#{{ entry.jargon_name -}}">{{ entry.jargon_name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>    
             {% for entry in jargon %}
-            <div class="col s12 m9 l10 push-m3 push-l2">
+            <div class="row">
+            <div class="col s12 m7 l9">
                 <div id="{{ entry.jargon_name }}" class="section scrollspy">
                     <h4>{{ entry.jargon_name }}</h4>
                         <p class="flow-text"><strong>Definition: </strong>{{ entry.definition }}<br>
@@ -96,14 +94,8 @@
                         </div>                    
                 </div>
             </div>
-            {% endfor %}
+            </div>
+            {% endfor %}    
         </div>
-        <div class="col hide-on-small-only m5 l3 pull-m7 pull-l9">
-            <ul class="section table-of-contents pinned toc-wrapper pin-top">
-                {% for entry in jargon %}
-                <li><a href="#{{ entry.jargon_name -}}">{{ entry.jargon_name }}</a></li>
-                {% endfor %}
-            </ul>
-        </div> 
 {% endblock %}
 
