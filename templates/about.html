@@ -3,10 +3,10 @@
 <div class="col s12 m8 offset-m2 l6 offset-l3">
     <div class="card-panel grey lighten-5 z-depth-1">
       <div class="row valign-wrapper">
-        <div class="col s2">
+        <div class="col hide-on-small-only m2 ">
           <img src="static/images/lenguff.png" alt="The original Len Guff" class="circle responsive-img">
         </div>
-          <div class="col s10">
+          <div class="col s12 m10">
             <span class="black-text flow-text">
           <h4>Who is Len Guff?</h4>
               <h5>Just an ordinary guy</h5>
@@ -40,6 +40,9 @@
                   get enough momentum, traction or velocity (or, you know, words) we could turn out a new ebook. 
                   Written by all of us. Because we are all Len Guff. </p>
             </span>
+            <div class="col-12 show-on-small">
+              <img src="static/images/lenguff.png" alt="The original Len Guff" class="circle responsive-img">
+            </div>
           </div>
       </div>
     </div>
@@ -49,15 +52,15 @@
               <a href="{{ url_for('add_jargon') }}"class="btn-large cyan darken-4 waves-effect waves-light">
                     Add Jargon <i class="fas fa-plus-square right"></i></a>
               <a href="{{ url_for('get_jargon') }}" class="btn-large cyan darken-4 waves-effect waves-light">
-                      Dictionary<i class="fas fa-book-open right"></i></a>
+                      Jargon<i class="fas fa-book-open right"></i></a>
                 
             {% else %}
               <a href="{{  url_for('register') }}" class="btn-large cyan darken-4 waves-effect waves-light">
                 Join Us <i class="fas fa-users right"></i></a>
-              <a href="{{ url_for('login') }}" class="btn-large cyan darken-4 waves-effect waves-light">
+              <a href="{{ url_for('login') }}" class="btn-large cyan darken-4 waves-effect waves-light hide-on-small-only">
                 Login <i class="fas fa-sign-in-alt right"></i></a>
               <a href="{{ url_for('get_jargon') }}" class="btn-large cyan darken-4 waves-effect waves-light">
-                Dictionary<i class="fas fa-book-open right"></i></a>
+                Jargon<i class="fas fa-book-open right"></i></a>
             {% endif %}
           </div>
         </div>
