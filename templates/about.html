@@ -41,27 +41,25 @@
                   Written by all of us. Because we are all Len Guff. </p>
             </span>
           </div>
-        </div>
-        
-        <div class="row">
-          <div class="col s12 m7 l9">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s12 text-center">
             {% if session.user %}
               <a href="{{ url_for('add_jargon') }}"class="btn-large cyan darken-4 waves-effect waves-light">
                     Add Jargon <i class="fas fa-plus-square right"></i></a>
-              <a href="{{ url_for('get_jargon') }}" class="sort-btn"><i class="fas fa-book-open"></i>
-                 Jargon Dictionary</a><br>
+              <a href="{{ url_for('get_jargon') }}" class="btn-large cyan darken-4 waves-effect waves-light">
+                      Dictionary<i class="fas fa-book-open right"></i></a>
                 
             {% else %}
               <a href="{{  url_for('register') }}" class="btn-large cyan darken-4 waves-effect waves-light">
-                Join Us <i class="fas fa-plus-square right"></i></a>
+                Join Us <i class="fas fa-users right"></i></a>
               <a href="{{ url_for('login') }}" class="btn-large cyan darken-4 waves-effect waves-light">
-                Login <i class="fas fa-plus-square right"></i></a>
-              <a href="{{ url_for('get_jargon') }}" class="sort-btn"><i class="fas fa-book-open"></i>
-                Jargon Dictionary</a><br>
+                Login <i class="fas fa-sign-in-alt right"></i></a>
+              <a href="{{ url_for('get_jargon') }}" class="btn-large cyan darken-4 waves-effect waves-light">
+                Dictionary<i class="fas fa-book-open right"></i></a>
             {% endif %}
           </div>
-          </div>
-      </div>
-    </div>
+        </div>
   </div>
 {% endblock %}
