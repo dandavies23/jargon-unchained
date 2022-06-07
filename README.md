@@ -252,49 +252,101 @@ Materialize’s "cyan darken-3" was also used for action icons and "cyan darken-
  
 # Features
 
-## Adaptive header nav
+## Adaptive header navbar
 - Uses brand colour
 - Flexes to all main screen sizes
-- Uses 'burger' and solid Londrina in portrait mobile 
+- Uses 'burger' and solid Londrina in portrait mobile
+- Uses ``` &nbsp;``` in header so written header treated as single logo
+- Solid Londrina font better readability on Mobile
 
 ![Tablet and above nav](readme/adaptive-navbar-tablet.png)
 ![Tablet admin](readme/adaptive-navbar-admin-view.png)
 ![Below tablet nav](readme/adaptive-navbar<tablet.png)
 ![Mobile Motorola](readme/mobile-portrait.png)
 
-## Homepage illustration shuffle and entry
-- Uses similar font to cover
-- Uses illustration from book
-- Offset quoote gives impressioon of 'boss' lecturing underling (Ken)
+## Flexible footer
+- Uses darker colour for better readability
+- Visually balanced left and right columns
+- Main menu repeat from header, removed from Mobile
+- Link to Len Guff leads to About 
+
+![Flexible footer](readme/flexible-footer.png)
+![Footer mobile](readme/flexible-footer-mobile.png)
+
+## Homepage splash
+- Uses similar header font to e-book cover
+- Uses same illustration from book
+- Offset quote gives impressioon of 'boss' lecturing his minion (Ken)
 - Option to 'shuffle' or find entry in dictionary
-- Extented entry: onpage disctionary entry 
+- Option to see the entry in context
+- "Extended Jargon" entry : on-page single dictionary entry to
+- Shuffle and Dictionary buttons explained within rant
 - [Thinking that possibly should have entry title?]
 
-![Homepaage splash](readme/homepage-splash.png)
+![Homepage splash](readme/homepage-splash.png)
 
+## Search bar
+- 'Jargonized' search instruction "Broaden your search envelope"
+- List compiled from title, definition and category
+- Form validation 
+- Search and reset buttons
+
+![Search Bar](readme/search.png)
+
+## Jargon dictionary
+- Contextual anchored scrollspy nav based on Jargon list
+- Solid Londira header font
+- Cleared marked out content and sized text (using Materialises 'flow-text')
+- 'Extended rant' collapsible so user can browse entries easier, also 'research' doesn't need to be done straight away and can be done by editor
+
+![Jargon dictionary](readme/dictionary-feed.png)
+
+## Dictionary CTA Bar
+- Like or dislike as a visitor to encourage interaction - green on roll-over
+- Edit or delete if you are logged in and created the entry / are an admin
+- Order list highest score first, A-Z, Z-A or random 10
+
+![CTA bar](readme/dictionary-cta-bar.png)
+
+## Wesbite forms
+
+- CRUD updates to MongoDB
+- Friendly font header
+- Icon lead
+- Instructional form cues
+- Validation (including dropdown)
+
+![Add Jargon form](readme/add_jargon.png)
+
+## Profile page
+- Easy access to recent entries
+- Edit and delete buttons on page
+![Profile page](readme/profilepage.png)
 
 # User Stories Testing
 
-## Database schema
+# Databases Collection and workflows
 ------------------
 
  ![Relational Diagram](readme/JUC_Relational_Diagram.png)
 
 ### Category Collection
+------------------
 
-*Another way to group entries - used in search function for this Sprint iteration.*
+*Another way to group entries - added to search function for this Sprint*
 
-Category (category_name): Nouns as verbs
+Category (category_name): 
+- Nouns as verbs
 
-\- Tortured metaphors
+- Tortured metaphors
 
-\- Overcomplicated
+- Overcomplicated
 
-\- Plain nonsense
+- Plain nonsense
 
-\- -ise
+- -ise
 
- 
+ _Admin can add more categories as they arise_
 
 ### Jargon Collection
 
@@ -302,15 +354,14 @@ Category (category_name): Nouns as verbs
 
 **Definition** (definition) “What does it really mean?" String: max-length:200 required)
 
-**Example sentence** (usage) **"**Use it in a sentence?“ String max-length: 100)
+**Example sentence** (usage) "Use it in a sentence?“ String max-length: 100)
 
 **Optional rant:** (editorialise) "Why is it here? Why do you love and hate it? Can you make it right? Is it going to last?” String: 200 not-required could be editorialised for e-book) END of input field
 
 **Category** (category_name) from category collection
 
-**Love percentage** (love_percent) triggered by voting thumbs up / thumbs down (originally intended to be out of 110% but left uncapped for now)
+**Love percentage** (love_percent) sets a default of 55 triggered by voting thumbs up / thumbs down. I originally this  be out of 110% but left uncapped for now. Admin can always reset.
 
- 
 
 ### User Collection
 
@@ -318,7 +369,7 @@ Category (category_name): Nouns as verbs
 
 **Password** (“password” - chosen by user)
 
-**E-Deets** (“email” - not for public but could be used - for login) Not in scope for this sprint
+**E-Deets** (“email” - not for public but could be used for login. _Requires paid for version of MongoDB or another framework_.
 
 **User-level** (determined by Admin)
 
@@ -332,15 +383,15 @@ Requires login to comment. Users are able to debate the correctness of the jargo
 
 ## User types
 
-**Visitor:** Can explore the dictionary and vote up and down (Read, Vote)
+**Visitor:** can explore the dictionary and vote up and down (Read, Vote)
 
 **User:** able to write contribute their own phrases and definitions, they can also update and delete their own entries. (Read, Vote, Create, Update own records, Delete own records, Comment on others)
 
-**Editor:** able to check and update and delete other contributions. (Update, Delete other entries) - not in scope for this MVP.
+_In this current sprint editor is currently frontend 'admin' user and more complex administration is done in MongoDB._
 
-**Admin**: able to grant editor user level, rewrite delete other contributions, have final say on definition. (Read, Vote, Create, Update own records, Delete own records, Delete users)
+**Editor:** able to check and update and delete other contributions. (Update, Delete other entries _for this sprint Editor is a admin through the JUC GUI_)
 
-These roles were kept in mind for development but there wasn’t enough development time to implement. In this current sprint editor is currently frontend admin is backend and more complex administration is done in MongoDB. 
+**Admin**: able to grant editor user level, rewrite delete other contributions, have final say on definition. (Read, Vote, Create, Update own records, Delete own records, Delete users, compile issue 2 - _for this sprint the Admin would work from the MongoDB GUI to mark entries for compilation_ )
 
  
 ## Testing and Bugs

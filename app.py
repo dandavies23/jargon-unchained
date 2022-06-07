@@ -31,11 +31,11 @@ def load_about():
 
 
 # Main dictionary routes
+# returns jargon newest first for relevancy and encourage contribution
 @app.route("/get_jargon")
 def get_jargon():
     jargon = list(mongo.db.jargon.find().sort("_id", -1))
     return render_template("jargon.html", jargon=jargon)
-# lists jargon newest first for relevancy and encourage contribution
 
 
 # returns the list alphabetically
@@ -52,11 +52,12 @@ def za_jargon():
     return render_template("jargon.html", jargon=jargon)
 
 
-# returns the list in random order
+# returns 10 from list in random order
 @app.route("/rand_jargon")
 def rand_jargon():
     jargon = list(mongo.db.jargon.aggregate([{'$sample': {'size': 10 }}]))
     return render_template("jargon.html", jargon=jargon)
+
 
 # returns the list by score
 @app.route("/rank_jargon")
