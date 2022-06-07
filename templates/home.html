@@ -3,13 +3,13 @@
     <div class="container">
         <div class="row">
             <h1 class="title">Jargon Unchained</h1>
-            <img class="responsive-img" src="static/images/JUC-illustration.jpg">
+            <img class="responsive-img" alt="business guy speaking jargon to Len Guff"src="static/images/JUC-illustration.jpg">
             <div class="col s12 l-offset-s6">
                 {% for entry in jargon %}
                 <p class="center-align flow-text">&ldquo;{{ entry.usage }}&rdquo;</p>
                 <p class="center-align dict-cta">
-                    <a href="{{ url_for('load_homepage') }}" class="sort-btn home-btn"><i class="fas fa-random"></i> </a>
-                    <a href="/get_jargon#{{ entry.jargon_name -}}" class="sort-btn home-btn"><i class="fas fa-book-open sort-btn"></i></a>
+                    <a href="{{ url_for('load_homepage') }}" class="sort-btn home-btn" alt="Get random entry"><i class="fas fa-random"></i> </a>
+                    <a href="/get_jargon#{{ entry.jargon_name -}}" class="sort-btn home-btn" alt="See entry in dictionary"><i class="fas fa-book-open sort-btn"></i></a>
                 </p>
                 <ul class="collapsible">
                     <li>

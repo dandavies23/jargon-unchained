@@ -8,14 +8,14 @@ Jargon Unchained
 
 Jargon Unchained 2.0 is the online app version of a business jargon dictionary. It is [deployed on Heroku](https://jargon-unchained.herokuapp.com/).
 
-Jargon Unchained was first published as an entertaining [business jargon e-book](https://leanpub.com/jargonunchained) a seven years ago. The book’s writer and stakeholder “Len Guff” published under pseudonym as even though the book was humorous in tone, its target was the B2B industry in which he worked.
+Jargon Unchained was first published as an entertaining [business jargon e-book](https://leanpub.com/jargonunchained) seven years ago. The book’s writer and stakeholder “Len Guff”, published under a pseudonym, was humorous in tone, its target was the B2B industry, where Len worked.
 
-Its intended audience were people, like him, who were perhaps newly-qualifed or fresh from university and were hearing bosses and CEOs employing jargon which sounded smart but was perhaps fundamentally stupid. This said there has been interest from business people who use the jargon but are interested in its correct etymology and correct usage.
+The intended audience are people like Len. Perhaps newly-qualifed, or fresh from university? These people listened to bosses and CEOs use business jargon which sounded smart - but also sounded stupid. However, CEO's, managers and people working in businesses (who all use this jargon), also expressed an interest in learning about the jargon's etymology and usage.
 
 
 ## Former strategy
 
-In interview the author claimed his intended growth strategy was to:
+In an interview the author claimed his intended growth strategy was to:
 
 1.  Largely give volume 1 away for free and build on a word-of-mouth reputation
 
@@ -23,7 +23,7 @@ In interview the author claimed his intended growth strategy was to:
 
 3.  A growing and interested audience could then be nudged pay more to but volume 3 outright.
 
-Now nearly 8 years after it was conceived the author admits that it has been difficult to maintain momentum and grow Jargon Unchained’s customer base. Also as a largely solo practice of collation, compiling new jargon for future volumes has taken longer than first estimated. The author pointed out that some original words have changed, disappeared or been more broadly adopted. This web app should revitalise interest, ease the burden of compilation and nurture a community who are interested in taking the next ebook further. 
+Now nearly 8 years after it was conceived, the author admits that it has been difficult to maintain momentum and grow Jargon Unchained’s customer base. Also, compiling new jargon for future volumes has taken longer than first estimated because it's a solo project. The author has revealed paragraphs were original words have either changed, disappeared or been more broadly adopted. The aims of this web appm is to revitalise interest, ease the burden of compilation and nurture a community interested in taking the next ebook further. 
 
 ## Competitor research
 
@@ -33,11 +33,11 @@ The stakeholder’s initial research discovered [World Wide Words](http://www.wo
 
 ![Worldwide words index](readme/competitors/WorldWideWordsIndex.png)
 
-Larger resources such as [Online Etymology Dictionary](http://www.etymonline.com/) are more robust with larger word lists largely compiled from other printed etmology books. It’s well researched by an American scholar and self-confessed early online amateur. The site's developoer enthusiastically maintains it, even building a Google Chrome extension. There is an academically authoritative layout which is also functional. The search and letter navigation are easy to understand.
+Larger resources such as [Online Etymology Dictionary](http://www.etymonline.com/) are more robust with larger word lists largely compiled from other printed etymology books. It’s well researched by an American scholar and self-confessed early online amateur. The site's developer, enthusiastically maintains it, even building a Google Chrome extension. There is an academically authoritative layout which is also functional. The search and letter navigation are easy to understand.
 
 ![Online Etymology Dictionary](readme/competitors/OnlineEtymologyDictionary.png)
 
-A similarly large resource by a British academic Gary Martin is [The Phrase Finder](https://www.phrases.org.uk/). Its scope is even broader but from a UX perspective the home page suffers from feature creep. With a flattened word cloud dominating the right hand side, the alphabet on the left is most useful search. The most interesting homepage function is the 'most popular today’ section.
+A similarly large resource by a British academic Gary Martin is [The Phrase Finder](https://www.phrases.org.uk/). Its scope is even broader but from a UX perspective the home page suffers from feature creep. A flattened word cloud dominating the right hand side and the alphabet on the left is most useful search. The most interesting homepage function is the 'most popular today’ section.
 
 ![Phrase Finder Home](readme/competitors/PhraseFinderHome.png)
 
@@ -45,7 +45,7 @@ The full list and well using the well structured taxonomy is the best way to nav
 
 ![Phrase Finder Full List](readme/competitors/PhraseFinderFullList.png)
 
-Clicking on the ‘Work’ category does take you to around [30 business jargon words](https://www.phrases.org.uk/meanings/business-and-work-related-phrases.html). It’s also worth pointing out that whilst in terms of tonally it’s a much more serious site. Once you’ve stepped through the navigation and reached the database - the UI is clean, fast focussed and learnable.
+Clicking on the ‘Work’ category takes the user around [30 business jargon words](https://www.phrases.org.uk/meanings/business-and-work-related-phrases.html). It is worth mentioning, that whilst in terms of tonally it’s a much more serious site. Once you’ve stepped through the navigation and reached the database - the UI is clean, fast focussed and learnable.
 
 Much more inline with the humorous tone of Jargon Unchained is[The Business Jargon Dictionary](http://www.theofficelife.com/business-jargon-dictionary-A.html) created by The Office Life. Navigation is via the rounded alphabet old school typwriter letters. It has a moustachioed water-cooler and the brevity of the entries encourages contribution and makes them easily shareable.
 
@@ -53,7 +53,7 @@ Much more inline with the humorous tone of Jargon Unchained is[The Business Jarg
 
 Although it’s worth noting that the social share buttons don’t work and the site’s [Twitter account](https://twitter.com/jargondujour) stopped retweeting in 2017. Contribution is done through a contact form which prevents a fluid and active community.
 
-In terms of simple and effective UI nurturing a strong community Jargon Unchained can learn a lot from [Urban Dictionary](https://www.urbandictionary.com/). Its is easy to contribute and interact, from visitors who can upvote and easily contribute, with simple search bar, shuffle function and login, through to a democratic contribution function.
+In terms of simple and effective UI nurturing, a strong Jargon Unchained community can learn a lot from [Urban Dictionary](https://www.urbandictionary.com/). It is easy to contribute and interact, from visitors who can upvote and easily contribute, with simple search bar, shuffle function and login, through to a democratic contribution function.
 
 ![Urban Dictionary](readme/competitors/UrbanDictionary.png)
 
@@ -329,19 +329,19 @@ Materialize’s "cyan darken-3" was also used for action icons and "cyan darken-
 
 1.  Get people to explore and enjoy the dictionary
 
-Dictionary is the first entry in the top nav. It doesn't require the user to login and enjoy. An entry is teased on the first page, which has a playful shuffle mode. Open book icon takes you to the full dictionary jump-linked to the shuffled reference. 
+- Dictionary is the first entry in the top nav. It doesn't require the user to login and enjoy. An entry is teased on the first page, which has a playful shuffle mode. Open book icon takes you to the full dictionary jump-linked to the shuffled reference. 
 
 2.  Raise awareness of the first ebook
-Ebook is mentioned and linked to in the footer and the about section. 
+- Ebook is mentioned and linked to in the footer and the about section. 
 
 3.  Get people to interact and contribute to the dictionary
-A visitor can vote entries up and down without being logged in. Signing up to contribute onle requires two fields.
+- A visitor can vote entries up and down without being logged in. Signing up to contribute onle requires two fields.
 
 4.  Build a community of contributors
-Has yet to be proven but hopefully ease of entry and an asiduous editor would nuture this. 
+- Has yet to be proven but hopefully ease of entry and an asiduous editor would nuture this. 
 
 5.  Compile new entries into second volume
-Within the Database the admin can now mark-up stories which he would like to take through to the next edition.
+- Within the Database the admin can now mark-up stories which he would like to take through to the next edition.
 
  
 
@@ -379,12 +379,13 @@ Within the Database the admin can now mark-up stories which he would like to tak
 
 ### Frequent User Goals
 
-1.  As a Frequent User, I want to see that the dictionary is growing and help it grow more
+1.  As a Frequent User, I want to see that the dictionary is growing and help it grow more.
 
 2.  As a Frequent User, I want to see what entries are doing well.
 
 3.  As a Frequent User, I want to watch the site grow and get the next volume of the ebook published.
 
+_These goals could be further escalated by creating an editor role properly and nuturing return visits through e-mail notifications and summaries which would be developed in later sprints after the concept was proven._
 
 # Databases Collection and workflows
 ------------------
@@ -454,12 +455,15 @@ _In this current sprint editor is currently frontend 'admin' user and more compl
 
 **Admin**: able to grant editor user level, rewrite delete other contributions, have final say on definition. (Read, Vote, Create, Update own records, Delete own records, Delete users, compile issue 2 - _for this sprint the Admin would work from the MongoDB GUI to mark entries for compilation_ )
 
+# Further enhancements to be deployed
+
  
-## Testing and Bugs
+# Testing and Bugs
 Testing and further details on compenents and features can be [found here](readme/TestingBugs.md).
 
+
+
 # Tools
- 
 
 ## Languages Used
 
@@ -493,7 +497,7 @@ Testing and further details on compenents and features can be [found here](readm
 
 -   [GitHub](https://github.com/) GitHub stored the projects code after being pushed to Heroku via Flask
 
--   [Balsamiq](https://balsamiq.com/) To create initial wireframes for the project design - full wireframes can be seen here.
+-   [Balsamiq](https://balsamiq.com/) To create initial wireframes for the project design - full wireframes [can be seen here](readme/wireframes).
 
 - [DB Diagram](https://dbdiagram.io/d/6297ea0054ce26352742e082) To create database schema
 
