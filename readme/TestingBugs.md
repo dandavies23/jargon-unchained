@@ -31,42 +31,88 @@ Testing and Bugs
 
  
 
-Testing
--------
+# Testing
 
-This project was manually tested. In a project which has a few different
-dependancies. The forms were validated in the backend with one significant bug
-leading to a further back-up strategy to improve this. All other behaviour such
-as navigation, responsiveness, login and CRUD can be assessed manually.
+This project was manually tested. Significant bugs were [raised and squashed](https://github.com/dandavies23/jargon-unchained/issues?q=label%3Abug+is%3Aclosed) within the Github issues.
+
+The forms were validated in the JUC GUI with one [significant bug](https://github.com/dandavies23/jargon-unchained/issues/25) having an impact on the integrity of the main Jargon database. 
+
+The following testing steps were taken to see if there were any conflicts between the form entry the UI in MongoDB. 
+
+**From the JUC UI**
+
+Create and Login as new user  ✅
+
+Login as user ✅
+
+Add Jargon entry ✅
+
+Login as user in Mongo DB - check database ✅
+
+Leave 'extended rant' empty ✅
+
+Submit dictionary entry
+
+Update own extended rant ✅
+
+Login as user in Mongo DB - check database ✅
+
+Add completed entry to importdb (a ‘fixture’) incase bug happens again ✅
+
+See entry under login ✅
 
  
 
-Responsiveness
---------------
+**Login as Admin** ✅
 
-### Desired Result
+Change new Jargon entry (corrected rant "And that's cool right?” ) ✅
+
+Delete entry ✅
+
+Login as user in Mongo DB - check database ✅
+
+Vote up  ✅
+
+Vote Down  ✅
+
+Reorder: A-Z, Z-A, 1-9 Shuffle  ✅
+
+Delete user  ✅
+
+Delete a used category  ✅
+
+Login as user in Mongo DB - check database ✅
+
+_None of these steps created any corruption or deletion of data entries_
+
+**Two possible reasons this may have previously happened**
+
+1. Two logins from MongoDB (from previous this and previous Walkthroughs)
+- Solution: Only using dan@dandavies23.com stopped using 'root'
+2. MongoDB and UI were worked on concurrently causing a version error
+- Solution: Only open up MongoDb and check when needed. 
+
+The database has been stored as a 'fixture' incase the issue should return. If so point app.py ```@app.route("/load_databases/")
+def load_databases():``` to ```importdb.py```
+
+
+# Responsiveness
+
+## Desired Result
 
 The site must display on any screen size without compromising legibility and
 eliminating screen and element overflow.
 
- 
 
-### Steps taken to ensure result
+## Steps taken to ensure result
 
 The library [Materialize](https://materializecss.com/) was used as a
-lightweight, grid-system CSS which ensured responsiveness to any screen size or
-device type. Materialize’s flow text class was applied to all main text fields.
+lightweight, grid-system CSS which ensured responsiveness to any screen size or device type. Materialize’s 'flow-text' class was applied to all main text fields.
 
-Further CSS media query customisation was employed to fix additional scaling
-issues. Particularly on mobile devices.
+Further CSS media query customisation was employed to fix additional scaling issues. Particularly on mobile devices.
 
-The Chrome developer tool was used and tested on an iPhone X, iPhone6 and a Moto
-G4 emulator during a responsiveness sprint.
+The Chrome developer tool was used and tested on an iPhone X, iPhone6 and a Moto G4 emulator during a responsiveness sprint.
 
-Further real device testing was undertaken using
-[Browserstack.](https://www.browserstack.com/screenshots)
-
- 
 
 ### Verdict
 
@@ -74,12 +120,10 @@ Jargon Unchained adapts well to all screen sizes and devices. ✔️
 
  
 
-Cross-Browser Compatibility
+## Cross-Browser Compatibility
 ---------------------------
 
 Display correctly in any browser except Internet Explorer.
-
-###  
 
 ### Steps taken to ensure result
 
@@ -91,18 +135,21 @@ The following browsers were used to check compatibility during build:
 
 -   Opera
 
-The following screen sizes OS and browsers were tested in Browserstack
-screenshots from the testing can be found here.
-
- 
+The following screen sizes OS and browsers were tested in Browserstack screenshots from the testing can be found here.
 
 ### Verdict
 
 Jargon Unchained works across all main modern browsers. ✔️
 
- 
+Further real device and cross browser testing was undertaken using
+[Lambda Test](https://links.lambdatest.com/)
 
-Site Components Behaviour
+## Code validation
+
+[Lighthouse](https://developers.google.com/web/tools/lighthouse) 
+
+
+## Site Components Behaviour
 -------------------------
 
 ### Navigation and orientation
@@ -133,7 +180,7 @@ Site Components Behaviour
 
  
 
-#### Dictionary page
+### Dictionary page
 
 -   Search function works and is easy to use ✔️
 
