@@ -325,6 +325,67 @@ Materialize’s "cyan darken-3" was also used for action icons and "cyan darken-
 
 # User Stories Testing
 
+## UX Priorities
+
+1.  Get people to explore and enjoy the dictionary
+
+Dictionary is the first entry in the top nav. It doesn't require the user to login and enjoy. An entry is teased on the first page, which has a playful shuffle mode. Open book icon takes you to the full dictionary jump-linked to the shuffled reference. 
+
+2.  Raise awareness of the first ebook
+Ebook is mentioned and linked to in the footer and the about section. 
+
+3.  Get people to interact and contribute to the dictionary
+A visitor can vote entries up and down without being logged in. Signing up to contribute onle requires two fields.
+
+4.  Build a community of contributors
+Has yet to be proven but hopefully ease of entry and an asiduous editor would nuture this. 
+
+5.  Compile new entries into second volume
+Within the Database the admin can now mark-up stories which he would like to take through to the next edition.
+
+ 
+
+## User Stories
+
+
+### First Time Visitor Goals
+
+1.  As a First Time Visitor, I want to understand the main purpose and tone of the site.
+- Dictionary is at the centre of the site. The About section is a rallying cry to get people who feel part of Len's tribe to submit jargon of their own.
+
+2.  As a First Time Visitor, I want to find or be surprised and entertained by past entries. I want to easily navigate and search and sort through the dictionary.
+- Newest entries are at the top of the dictionary by default. Sort options are central and easy to understand.
+
+3.  As a First Time Visitor, I want to easily interact by up or down voting entries I like. I want it to be fairly frictionless to contribute my own entries.
+- There is no requirement to sign up to vote. Sign-up is quick and easy. 
+
+ 
+
+### Returning Visitor Goals
+
+1.  As a Returning Visitor, I want to see that the site is growing and be surprised by new jargon.
+- New entries appear at top. Editor and Admin have planned a schedule of building the site whilst working in the industry. 
+
+2.  As a Returning Visitor, I want to see what entries are doing well.
+- User can sort numerically and vote up or down.
+
+3.  As a Returning Visitor, I want to write my own contributions and see how they are doing.
+- Profile page entries have love score on the cards so they can track progress. 
+
+4.  As a Returning Visitor, I want to write my own 'Extend rants' and see how well my previous contributions are doing. 
+- Extended rants are optional, but user might want to add at a later date. They are cyan to the user to encourage them to add.
+
+ 
+
+### Frequent User Goals
+
+1.  As a Frequent User, I want to see that the dictionary is growing and help it grow more
+
+2.  As a Frequent User, I want to see what entries are doing well.
+
+3.  As a Frequent User, I want to watch the site grow and get the next volume of the ebook published.
+
+
 # Databases Collection and workflows
 ------------------
 

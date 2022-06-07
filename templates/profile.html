@@ -17,8 +17,7 @@
             </a>
         </div>
     </div>
-    <!-- using the same template from category cards 
-    need to display entries by user -->
+    <!-- same template from category cards displays entries by user -->
     <div class="row">
         
             {% for entry in jargon %}
@@ -27,6 +26,7 @@
                     <div class="card cyan center-align">
                         <div class="card-content white-text">
                             <span class="card-title flow-text">{{ entry.jargon_name }}</span>
+                            <h5 class="flow-text"><i class="fas fa-heart"></i> {{ entry.love_percent }}</h5>
                         </div>
                         <div class="card-action flow-text">
                             <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}">
