@@ -287,6 +287,7 @@ def delete_category(category_id):
 
 @app.route("/load_databases/")
 def load_databases():
+    # Removed because quite easy to trigger from browser history
     # mongo.db.jargon.insert_many([
       #  use importdb.py as a fixture ])
     return redirect(url_for("load_homepage"))

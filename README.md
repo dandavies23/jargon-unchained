@@ -160,7 +160,7 @@ In terms of simple and effective UI nurturing, a strong Jargon Unchained communi
 
 4. Add Jargon dictionary (see [bug #25](https://github.com/dandavies23/jargon-unchained/issues/25))
 
-5. Further bug fixing and testing to [Testing Bugs](readme/TestingBugs.md)
+5. Further bug fixing and testing to [Testing Bugs](/TestingBugs.md)
 
  
 
@@ -514,6 +514,8 @@ Testing and further details on compenents and features can be [found here](readm
 -   [Lighthouse](https://developers.google.com/web/tools/lighthouse) I used it to audit performance of the application
 
 -   [Chrome DevTools ](https://developer.chrome.com/docs/devtools/)I used this service to test code changes and responsivity of landing page.
+
+- [Lambda Test](https://links.lambdatest.com/) used to check responsiveness on range of devices, OS and browsers
 
  
 

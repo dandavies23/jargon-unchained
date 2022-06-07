@@ -147,6 +147,9 @@ Further real device and cross browser testing was undertaken using
 ## Code validation
 
 [Lighthouse](https://developers.google.com/web/tools/lighthouse) 
+![Lighthouse result](readme/lighthouse-result.png) It scored very highly apart from the Acessibility colour contrast which was inherited from the ebook. Steps to mitigate this are explained further in 'Colour Scheme' in the README.
+
+
 
 
 ## Site Components Behaviour
@@ -272,7 +275,8 @@ logo words and icons pushed outside the container.
 Logo and text were placed on the left with separate resize CSS, tested on all
 sizes. Logo was resized for optimisation, (inline resize also didn’t work in
 Internet Explore) then fixed for all screen sizes. Navigation icons were decided
-agains for accessibility and because the extended navbar wouldn’t extend.
+against for accessibility reasons. A non-breaking space was added to the navbar 
+title to prevent overspill. 
 
  
 
@@ -299,10 +303,13 @@ bugs:
 -   Text occasionally overflows **Fix** fixed for most screen sizes using the
     grid and not showing on small
 
--   Side nav anchor tag wasn’t working **Partial fix **fed entry into anchor
-    link field prefixed with a hash
+- Grid was rebuilt and pinned was abandoned which solved [bug #23](https://github.com/dandavies23/jargon-unchained/issues/23).
 
-**Verdict: Partial success**
+-   Side nav anchor tag wasn’t working - fed entry into anchor
+    link field prefixed with a hash. On modern browsers space on anchortag
+    is supplemented but W3 Validator [runs this as an error](https://validator.w3.org/nu/?doc=http%3A%2F%2Fjargon-unchained.herokuapp.com%2Fabout).
+
+**Verdict: Partial fiz**
 
 Currently scrollspy is working and it is a nice dynamic feature for navigating
 the dictionary. But in further versions it is worth fixing the anchor tag issue
@@ -330,8 +337,6 @@ modal was dropped in but it didn’t activate the Modal.
 It’s worth remembering that static anchor click isn’t going to work in a
 dynamically created webpage. Instead the Javascript version of the plugin was
 used and targeted using the component ID.
-
-###  
 
 ### Vote up / Vote Down
 
