@@ -17,12 +17,14 @@ app.secret_key = os.environ.get("SECRET_KEY")
 
 mongo = PyMongo(app)
 
+
 # Homepage splash which introduces the Jargon Unchained concept
 @app.route("/")
 @app.route("/home")
 def load_homepage():
-    jargon = mongo.db.jargon.aggregate([{'$sample': {'size': 1 }}])
+    jargon = mongo.db.jargon.aggregate([{'$sample': {'size': 1}}])
     return render_template("home.html", jargon=jargon)
+
 
 # About page app route
 @app.route("/about")
@@ -55,7 +57,7 @@ def za_jargon():
 # returns 10 from list in random order
 @app.route("/rand_jargon")
 def rand_jargon():
-    jargon = list(mongo.db.jargon.aggregate([{'$sample': {'size': 10 }}]))
+    jargon = list(mongo.db.jargon.aggregate([{'$sample': {'size': 10}}]))
     return render_template("jargon.html", jargon=jargon)
 
 
@@ -178,8 +180,8 @@ def profile(username):
         {"username": session["user"]})["username"]
     if session["user"]:
         jargon = mongo.db.jargon.find({"created_by": username})
-        return render_template("profile.html",
-            username=username, jargon=jargon)
+        return render_template("profile.html", username=username,
+                               jargon=jargon)
     return redirect(url_for("login"))
 
 
@@ -232,9 +234,12 @@ def edit_jargon(entry_id):
     entry = mongo.db.jargon.find_one({"_id": ObjectId(entry_id)})
 
     categories = mongo.db.categories.find().sort("category_name", 1)
-    return render_template("edit_jargon.html", entry=entry, categories=categories)
+    return render_template(
+        "edit_jargon.html",
+        entry=entry,
+        categories=categories)
 
-
+        
 # delete jargon
 @app.route("/delete_jargon/<entry_id>")
 def delete_jargon(entry_id):
@@ -289,11 +294,11 @@ def delete_category(category_id):
 def load_databases():
     # Removed because quite easy to trigger from browser history
     # mongo.db.jargon.insert_many([
-      #  use importdb.py as a fixture ])
+    #  use importdb.py as a fixture ])
     return redirect(url_for("load_homepage"))
 
 
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),
-            debug=True) 
+            debug=True)

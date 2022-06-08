@@ -148,7 +148,10 @@ Further real device and cross browser testing was undertaken using
 
 [Lighthouse](https://developers.google.com/web/tools/lighthouse) 
 ![Lighthouse result](readme/lighthouse-result.png) It scored very highly apart from the Acessibility colour contrast which was inherited from the ebook. Steps to mitigate this are explained further in 'Colour Scheme' in the README.
-
+[W3C Markup Validation Service](https://validator.w3.org/)
+- Fixed small errors, only large one relates to Scrollspy widget see REAMDE.
+[W3C CSS Validation Service](https://jigsaw.w3.org/) 
+- Only errors here related to vendor extensions for Materialise and Font Awesone
 
 
 
