@@ -239,7 +239,7 @@ def edit_jargon(entry_id):
         entry=entry,
         categories=categories)
 
-        
+
 # delete jargon
 @app.route("/delete_jargon/<entry_id>")
 def delete_jargon(entry_id):

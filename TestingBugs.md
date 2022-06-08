@@ -150,10 +150,17 @@ Further real device and cross browser testing was undertaken using
 ![Lighthouse result](readme/lighthouse-result.png) It scored very highly apart from the 
 Acessibility colour contrast which was inherited from the ebook. 
 Steps to mitigate this are explained further in 'Colour Scheme' in the README.
-[W3C Markup Validation Service](https://validator.w3.org/)
+
+[W3C Markup Validation Service](https://validator.w3.org/nu/?showoutline=yes&doc=http%3A%2F%2Fjargon-unchained.herokuapp.com%2F)
+- Fixed hierarchy warning carried over from using h-classes in base.html changed to text highlight.
 - Fixed small errors, only large one relates to Scrollspy widget see REAMDE.
-[W3C CSS Validation Service](https://jigsaw.w3.org/) 
-- Only errors here related to vendor extensions for Materialise and Font Awesone
+
+[W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/validator?uri=http%3A%2F%2Fjargon-unchained.herokuapp.com%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en#errors)
+![W3C CSS result](readme/W3C-CSS.png) 
+- Only errors here related to vendor extensions for Materialize and Font Awesone
+
+[PEP8 online](http://pep8online.com/) 
+![Pep8 Result](readme/pep8-all-right.png)
 
 
 
