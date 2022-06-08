@@ -147,7 +147,9 @@ Further real device and cross browser testing was undertaken using
 ## Code validation
 
 [Lighthouse](https://developers.google.com/web/tools/lighthouse) 
-![Lighthouse result](readme/lighthouse-result.png) It scored very highly apart from the Acessibility colour contrast which was inherited from the ebook. Steps to mitigate this are explained further in 'Colour Scheme' in the README.
+![Lighthouse result](readme/lighthouse-result.png) It scored very highly apart from the 
+Acessibility colour contrast which was inherited from the ebook. 
+Steps to mitigate this are explained further in 'Colour Scheme' in the README.
 [W3C Markup Validation Service](https://validator.w3.org/)
 - Fixed small errors, only large one relates to Scrollspy widget see REAMDE.
 [W3C CSS Validation Service](https://jigsaw.w3.org/) 
@@ -325,7 +327,7 @@ properly. Two solutions are:
 
  
 
-### Other bugs and learning
+## Other bugs and learning
 
 ### Defensive programming
 

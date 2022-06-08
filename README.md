@@ -175,8 +175,6 @@ The intention of v1 was to achieve a working Minimal Viable Product (MVP). Energ
 
 The site is should be humorous in tone. It should be fun to use and enjoyable to lampoon business jargon. Some of the language used in the field should employ business jargon. Research touchpoints for this are a blend between The Business Jargon Dictionary and Urban Dictionary.
 
- 
-
 ## Legacy
 
 Humour is important to how this website is pitched. It is in-sympathy with the original design. As much as is possible, there should be a love/hate relationship with the business jargon. As much as the words or phrases can be annoying it can also be usefuul to play with them.
