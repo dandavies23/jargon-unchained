@@ -1,35 +1,32 @@
 Testing and Bugs
 ================
+- [Testing](#testing)
+  * [Testing Steps](#testing-steps)
+- [Responsiveness](#responsiveness)
+  * [Desired Result](#desired-result)
+  * [Steps taken to ensure result](#steps-taken-to-ensure-result)
+    + [Verdict](#verdict)
+  * [Cross-Browser Compatibility](#cross-browser-compatibility)
+    + [Steps taken to ensure result](#steps-taken-to-ensure-result-1)
+    + [Verdict](#verdict-1)
+  * [Code validation](#code-validation)
+  * [Site Components Behaviour](#site-components-behaviour)
+    + [Navigation and orientation](#navigation-and-orientation)
+    + [Dictionary page](#dictionary-page)
+    + [Form pages](#form-pages)
+    + [Manage Categories / user’s Jargon entries](#manage-categories---user-s-jargon-entries)
+    + [Login / Registration](#login---registration)
+  * [Bugs](#bugs)
+    + [Materialize issues](#materialize-issues)
+    + [Navigation bar (Navbar)](#navigation-bar--navbar-)
+    + [Scrollspy](#scrollspy)
+  * [Other bugs and learning](#other-bugs-and-learning)
+    + [Defensive programming](#defensive-programming)
+    + [Vote up / Vote Down](#vote-up---vote-down)
+    + [Sorting options](#sorting-options)
+    + [More ‘granular’ detail](#more--granular--detail)
 
--   [Testing and Bugs](#testing-and-bugs)
-
--   Testing
-
--   Responsiveness
-
--   Cross-Browser Capability
-
--   Site component behaviour
-
--   Bugs
-
--   Materialize issues
-
-    -   Navigation bar
-
-    -   Scrollspy
-
--   Other bugs and learning
-
--   Defensive programming
-
-    -   Vote up / Vote down
-
-    -   Sorting options
-
--   More ‘granular’ detail ;)
-
- 
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
 
 # Testing
 
@@ -38,6 +35,8 @@ This project was manually tested. Significant bugs were [raised and squashed](ht
 The forms were validated in the JUC GUI with one [significant bug](https://github.com/dandavies23/jargon-unchained/issues/25) having an impact on the integrity of the main Jargon database. 
 
 The following testing steps were taken to see if there were any conflicts between the form entry the UI in MongoDB. 
+
+## Testing Steps
 
 **From the JUC UI**
 
