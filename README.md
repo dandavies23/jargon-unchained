@@ -173,7 +173,7 @@ In terms of simple and effective UI nurturing, a strong Jargon Unchained communi
 
 2.  Planning out work process deadlines, work structure and testing implementation
 
-3.  GitHub’s project Kanban used to track development, improvements and bug fixes.
+3.  [GitHub’s project Kanban](https://github.com/dandavies23/jargon-unchained/projects/1) used to track development, improvements and bug fixes.
 
  
 
@@ -223,7 +223,7 @@ In terms of simple and effective UI nurturing, a strong Jargon Unchained communi
 
 ## Out of scope
 
-The intention of v1 was to achieve a working Minimal Viable Product (MVP). Energy and time was focussed on creating a database and it being functional from a user perspective. Extra features have been added to this version to enhance the user experience and better fulfil the user journeys. 
+The intention of v1 was to achieve a working Minimal Viable Product (MVP). Energy and time was focussed on creating a database and it being functional from a user perspective. Extra features have been added to this v2 to enhance the user experience and better fulfil the user journeys. 
 
  ![Cover text](readme/jargonunchainedtext.png)
 
@@ -378,6 +378,15 @@ Materialize’s "cyan darken-3" was also used for action icons and "cyan darken-
 - Edit and delete buttons on page
 ![Profile page](readme/profilepage.png)
 
+## About page
+- Humourous "[hero's journey](https://octopuspr.co.uk/journalists-want-hero-story/)" a techniques used by entrepreneurs to build their business mythology
+- Essentially a rant and then call to arms to get involved
+- Offset circular picture to compliment copy
+- Contextualise buttons dependent on login with explainer text for first time users
+
+![about page](readme/about-len-guff.png)
+![bottom buttons](readme/about-cta-buttons.png)
+
 # User Stories Testing
 
 ## UX Priorities
@@ -479,6 +488,10 @@ Category (category_name):
 
 **Love percentage** (love_percent) sets a default of 55 triggered by voting thumbs up / thumbs down. I originally this  be out of 110% but left uncapped for now. Admin can always reset.
 
+**Issue** (issue) sets a default as 3. Admin will decide when content is ready and push into 'issue 2' for publication. Issue 1 has already been published, although if Issue 1 content needs updating it should be changed into 3 then 2 when ready. 
+
+![MongoDB Jargon with issue](readme/mongo-jargon-entries.png)
+
 
 ### User Collection
 
@@ -486,9 +499,11 @@ Category (category_name):
 
 **Password** (“password” - chosen by user)
 
-**E-Deets** (“email” - not for public but could be used for login. _Requires paid for version of MongoDB or another framework_.
+**E-Deets** (“email” - nxot for public but could be used for login. _Requires paid for version of MongoDB or another framework_.
 
-**User-level** (determined by Admin)
+**role** (determined by Admin)
+
+![MongoDB with role](readme/mongo-user-with-roles.png)
 
 In discussion with my mentor it was decided for this MVP that email grab wasn’t needed as verification protocol and technology isn’t in place. Further down the line it will be.
 
@@ -510,7 +525,36 @@ _In this current sprint editor is currently frontend 'admin' user and more compl
 
 **Admin**: able to grant editor user level, rewrite delete other contributions, have final say on definition. (Read, Vote, Create, Update own records, Delete own records, Delete users, compile issue 2 - _for this sprint the Admin would work from the MongoDB GUI to mark entries for compilation_ )
 
-# Further enhancements to be deployed
+# Further enhancements for future sprints
+## Roles Editor and Admin in GUI 
+Admin as a role not a user. Editor is able to edit all and decide edition and editorial workflow on Jargon Unchained site
+
+## Simple and fun About
+One idea I'm desperate to integrate is a PowerPoint style Carousel with the crossheads as inspiring quotes "One day something changed"
+
+## More sorting and filtering
+Would like to make collection within for Categories and username linked from the main run.
+
+## Like or dislike returns to the flow
+Create an app route that doesn't reboot the page so user can see the voting up and down
+
+## Social sharing feature
+Single page listing for each listing so it has a discreet URL and OpenGraph metadata fields.
+
+## Comment database 
+May not be needed if social strategy works well 
+
+## Email at sign-up 
+Used for password reset notification and newsletters
+
+## Paginate dictionary
+When listings get too long and effect load time signifcantly would be good to paginate 
+
+## Login requirement for voting
+If the scores start getting out of control!
+
+## Single vote using local storage
+Similar solution to [highscore in Smoothie Moves](https://github.com/dandavies23/smoothie-moves/issues/38) project
 
  
 # Testing and Bugs
