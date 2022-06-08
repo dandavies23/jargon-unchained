@@ -12,7 +12,7 @@
     </div>
     <div class="row">
         <div class="col s12 center-align">
-            <a href="{{ url_for('add_jargon') }}" class="btn-large cyan darken-4">
+            <a href="{{ url_for('add_jargon') }}" class="btn-large cyan darken-4 waves-effect waves-light">
                 Add Jargon <i class="fas fa-plus-square right"></i>
             </a>
         </div>
@@ -30,9 +30,9 @@
                         </div>
                         <div class="card-action flow-text">
                             <a href="{{ url_for('edit_jargon', entry_id=entry._id) }}">
-                                <i class="btn-flat cyan darken-3 fas fa-pencil-alt"></i>
+                                <i class="btn-flat cyan darken-3 fas fa-pencil-alt waves-effect waves-light"></i>
                             </a>
-                            <button data-target="{{ entry._id }}" class="btn-flat modal-trigger red darken-1">
+                            <button data-target="{{ entry._id }}" class="btn-flat modal-trigger red darken-1 waves-effect waves-light">
                                 <i class="fas fa-times-circle"></i>
                             </button>
                         </div>
@@ -43,7 +43,7 @@
                                 <p>Ctrl-Z won't save you if you hit delete!</p>
                             </div>
                             <div class="modal-footer">
-                                <a href="#!" class="modal-close btn-flat cyan darken-3"><i class="fas fa-undo right"></i>Take me back</a>
+                                <a href="#!" class="modal-close btn-flat cyan darken-3 waves-effect waves-light"><i class="fas fa-undo right"></i>Take me back</a>
                                 <a href="{{ url_for('delete_jargon', entry_id=entry._id) }}" 
                                 class="btn-flat red">Delete delete!<i class="fas fa-times-circle right"></i></a>
                             </div>
