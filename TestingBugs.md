@@ -136,12 +136,14 @@ The following browsers were used to check compatibility during build:
 
 The following screen sizes OS and browsers were tested in Browserstack screenshots from the testing can be found here.
 
+Further real device and cross browser testing was undertaken using there were some issues in older Windows OS. 
+
+[Lambda Test](https://links.lambdatest.com/XCWEJ1ASE7VQ89UONT7SUC9GB90L90HMQ0BVLQQP918IVYC5QZXC6CR8KH58CLAQ)
+
 ### Verdict
 
 Jargon Unchained works across all main modern browsers. ✔️
 
-Further real device and cross browser testing was undertaken using
-[Lambda Test](https://links.lambdatest.com/)
 
 ## Code validation
 
